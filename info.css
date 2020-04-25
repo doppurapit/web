@@ -1,0 +1,27 @@
+html {
+        height: 100%;
+      }
+
+      body {
+        background: linear-gradient(
+          75deg,
+          rgb(206, 217, 228),
+          rgba(205, 240, 240, 0.788)
+        );
+        height: 100%;
+      }
+      section {
+        background: linear-gradient(
+          45deg,
+          rgb(217, 236, 208),
+          rgb(169, 224, 180)
+        );
+        margin: 0%;
+      }
+
+      h1 {
+        background-color: rgb(122, 236, 236);
+      }
+      p {
+        background-color: rgb(134, 226, 226);
+      }
