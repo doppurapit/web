@@ -2,15 +2,6 @@ html {
   height: 100%;
 }
 
-#TABLE {
-  height: 100%;
-  width: 97%;
-  margin-left: auto;
-  margin-right: auto;
-  overflow-x: auto;
-  overflow-y: auto;
-}
-
 body {
   background: linear-gradient(
     75deg,
@@ -25,7 +16,13 @@ section {
 }
 table {
   background: rgba(255, 255, 255, 0.671);
-  margin: 0%;
+  height: 100%;
+  width: 97%;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  overflow: auto;
 }
 
 h1 {
@@ -40,8 +37,8 @@ p {
 
 #SCROLL {
   height: 150px;
-  width: 95%;
-  overflow-y: scroll;
+  width: 97.5%;
+  overflow: auto;
 }
 
 iframe {

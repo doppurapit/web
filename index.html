@@ -17,12 +17,14 @@
     />
     <link rel="stylesheet" type="text/css" href="index.css" />
     <title>同名地研究プロジェクト</title>
+    <script type="text/javascript" src="clock.js"></script>
+    <script type="text/javascript" src="img.js"></script>
   </head>
   <body>
     <h1>同名地研究プロジェクト</h1>
-    <h2>
-      トップ写真:のの岳駅に「のの」だけ・・・by森久保乃々
-    </h2>
+    <div id="nowtoptext" ></div>
+    <img id="nowimg" width="300" height="540"></img>
+    <!--
     <img
       src="画/のの3.png"
       onmouseover="src='画/のの1.png'"
@@ -31,9 +33,12 @@
       width="270"
       height="480"
     />
+    -->
     <footer>
       ©2015 BNEI
     </footer>
+    <p><strong>時刻</strong></p>
+    <div id="nowtime"></div>
     <p><strong>お知らせ</strong></p>
     <h2>
       <em><a href="info.html">アイドルの同名地訪問写真募集!!!</a></em>
@@ -59,13 +64,22 @@
         2020/04/20
         宮古駅などの画像データ更新・表の一部修正・HPレイアウトの一部仕様変更
       </h4>
+      <h4>2020/07/25 アイマスアイドル同名市町村データテーブル公開!!!</h4>
+      <h4>2020/07/25 Q&Aに「同名地の基準」について追記</h4>
     </div>
+
+    <p><strong>総合メニュー</strong></p>
+    <ul>
+      <li>
+        <em><a href="SNPofcity.html">アイマスアイドル同名市町村データ</a></em>
+      </li>
+    </ul>
 
     <p><strong>デレマスアイドル同名駅マップ</strong></p>
     <iframe
       src="https://www.google.com/maps/d/u/0/embed?mid=1v5z4lOl1pvq4nQkSFurahJ9E8qwg6kzS"
-      width="640"
-      height="480"
+      width="640px"
+      height="480px"
     ></iframe>
 
     <p><strong>ツイッター発信例</strong></p>
@@ -78,14 +92,16 @@
       <em><a href="Q&A.html">ページはこちらから</a></em>
     </h2>
 
-    <p><strong id="top">メニュー</strong></p>
+    <p>
+      <strong id="top">アイマスアイドル同名駅データテーブルメニュー</strong>
+    </p>
     <ul>
       <li>
-        <em><a href="index.html#Hokkaido">北海道</a></em>
+        <a href="index.html#Hokkaido">北海道</a>
       </li>
       <div id="il">
         <li>
-          <em><a href="index.html#Tohoku">東北</a></em>
+          <a href="index.html#Tohoku">東北</a>
           <ul>
             <li><a href="index.html#Miyagi">宮城県</a></li>
             <li><a href="index.html#Aomori">青森県</a></li>
@@ -96,7 +112,7 @@
           </ul>
         </li>
         <li>
-          <em><a href="index.html#Kanto">関東</a></em>
+          <a href="index.html#Kanto">関東</a>
           <ul>
             <li><a href="index.html#Tokyo">東京都</a></li>
             <li><a href="index.html#Saitama">埼玉県</a></li>
@@ -108,7 +124,7 @@
           </ul>
         </li>
         <li>
-          <em><a href="index.html#Tube">中部</a></em>
+          <a href="index.html#Tube">中部</a>
           <ul>
             <li><a href="index.html#Yamanasi">山梨県</a></li>
             <li><a href="index.html#Nagano">長野県</a></li>
@@ -123,7 +139,7 @@
           </ul>
         </li>
         <li>
-          <em><a href="index.html#Kansai">関西</a></em>
+          <a href="index.html#Kansai">関西</a>
           <ul>
             <li><a href="index.html#Osaka">大阪府</a></li>
             <li><a href="index.html#Kyoto">京都府</a></li>
@@ -134,7 +150,7 @@
           </ul>
         </li>
         <li>
-          <em><a href="index.html#Tusikoku">中国・四国</a></em>
+          <a href="index.html#Tusikoku">中国・四国</a>
           <ul>
             <li><a href="index.html#Hiroshima">広島県</a></li>
             <li><a href="index.html#Okayama">岡山県</a></li>
@@ -148,7 +164,7 @@
           </ul>
         </li>
         <li>
-          <em><a href="index.html#Kyusyu">九州</a></em>
+          <a href="index.html#Kyusyu">九州</a>
           <ul>
             <li><a href="index.html#Hukuoka">福岡県</a></li>
             <li><a href="index.html#Saga">佐賀県</a></li>
@@ -163,7 +179,7 @@
     </ul>
     <section>
       <h2 id="Hokkaido">北海道</h2>
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -324,8 +340,7 @@
     <section>
       <h2 id="Tohoku">東北</h2>
       <h3 align="center" id="Miyagi">宮城県</h3>
-
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -417,8 +432,7 @@
       </table>
 
       <h3 align="center" id="Aomori">青森県</h3>
-
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -453,8 +467,7 @@
       </table>
 
       <h3 align="center" id="Akita">秋田県</h3>
-
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -486,7 +499,7 @@
           <th>北秋田市</th>
           <th>-</th>
         </tr>
-        <!--駅名改称(縄文小ヶ田駅)により対象外(緒方智絵理→緒方駅があるため)
+        <!--駅名改称(縄文小ヶ田駅)により対象外(緒方智絵里→緒方駅があるため)
         <tr>
           <th>秋田内陸縦貫鉄道秋田内陸線</th>
           <th>
@@ -503,8 +516,7 @@
       </table>
 
       <h3 align="center" id="Iwate">岩手県</h3>
-
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -545,8 +557,7 @@
       </table>
 
       <h3 align="center" id="Yamagata">山形県</h3>
-
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -599,8 +610,7 @@
       </table>
 
       <h3 align="center" id="Hukusima">福島県</h3>
-
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -825,7 +835,7 @@
     <section>
       <h2 id="Kanto">関東</h2>
       <h3 align="center" id="Tokyo">東京都</h3>
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -1161,7 +1171,7 @@
       </table>
 
       <h3 align="center" id="Saitama">埼玉県</h3>
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -1296,7 +1306,7 @@
         </tr>
       </table>
       <h3 align="center" id="Kanagawa">神奈川県</h3>
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -1413,7 +1423,7 @@
       </table>
 
       <h3 align="center" id="Chiba">千葉県</h3>
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -1688,7 +1698,7 @@
       </table>
 
       <h3 align="center" id="Ibaraki">茨城県</h3>
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -1781,7 +1791,7 @@
       </table>
 
       <h3 align="center" id="Tochigi">栃木県</h3>
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -1846,7 +1856,7 @@
       </table>
 
       <h3 align="center" id="Gunma">群馬県</h3>
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -1944,7 +1954,7 @@
     <section>
       <h2 id="Tube">中部</h2>
       <h3 align="center" id="Yamanasi">山梨県</h3>
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -1990,7 +2000,7 @@
       </table>
 
       <h3 align="center" id="Nagano">長野県</h3>
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -2232,7 +2242,7 @@
       </table>
 
       <h3 align="center" id="Niigata">新潟県</h3>
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -2361,7 +2371,7 @@
       </table>
 
       <h3 align="center" id="Toyama">富山県</h3>
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -2384,7 +2394,7 @@
       </table>
 
       <h3 align="center" id="Ishikawa">石川県</h3>
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -2442,7 +2452,7 @@
       </table>
 
       <h3 align="center" id="Hukui">福井県</h3>
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -2488,7 +2498,7 @@
       </table>
 
       <h3 align="center" id="Sizuoka">静岡県</h3>
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -2667,7 +2677,7 @@
       </table>
 
       <h3 align="center" id="Aichi">愛知県</h3>
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -2881,7 +2891,7 @@
       </table>
 
       <h3 align="center" id="Gihu">岐阜県</h3>
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -2968,7 +2978,7 @@
       </table>
 
       <h3 align="center" id="Mie">三重県</h3>
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -3084,7 +3094,7 @@
     <section>
       <h2 id="Kansai">関西</h2>
       <h3 align="center" id="Osaka">大阪府</h3>
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -3250,7 +3260,7 @@
       </table>
 
       <h3 align="center" id="Kyoto">京都府</h3>
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -3383,7 +3393,7 @@
       </table>
 
       <h3 align="center" id="Hyogo">兵庫県</h3>
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -3525,7 +3535,7 @@
       </table>
 
       <h3 align="center" id="Nara">奈良県</h3>
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -3595,7 +3605,7 @@
       </table>
 
       <h3 align="center" id="Shiga">滋賀県</h3>
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -3666,7 +3676,7 @@
       </table>
 
       <h3 align="center" id="Wakayama">和歌山県</h3>
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -3698,7 +3708,7 @@
     <section>
       <h2 id="Tusikoku">中国・四国</h2>
       <h3 align="center" id="Hiroshima">広島県</h3>
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -3800,7 +3810,7 @@
       </table>
 
       <h3 align="center" id="Okayama">岡山県</h3>
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -3899,7 +3909,7 @@
       </table>
 
       <h3 align="center" id="Yamaguchi">山口県</h3>
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -3958,7 +3968,7 @@
       </table>
 
       <h3 align="center" id="Tottori">鳥取県</h3>
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -3993,7 +4003,7 @@
       </table>
 
       <h3 align="center" id="Shimane">島根県</h3>
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -4016,7 +4026,7 @@
       </table>
 
       <h3 align="center" id="Ehime">愛媛県</h3>
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -4063,7 +4073,7 @@
       </table>
 
       <h3 align="center" id="Kagawa">香川県</h3>
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -4122,7 +4132,7 @@
       </table>
 
       <h3 align="center" id="Tokushima">徳島県</h3>
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -4145,7 +4155,7 @@
       </table>
 
       <h3 align="center" id="Kouchi">高知県</h3>
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -4223,7 +4233,7 @@
     <section>
       <h2 id="Kyusyu">九州</h2>
       <h3 align="center" id="Hukuoka">福岡県</h3>
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -4447,7 +4457,7 @@
       </table>
 
       <h3 align="center" id="Saga">佐賀県</h3>
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -4494,7 +4504,7 @@
       </table>
 
       <h3 align="center" id="Nagasaki">長崎県</h3>
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -4553,7 +4563,7 @@
       </table>
 
       <h3 align="center" id="Kumamoto">熊本県</h3>
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -4612,7 +4622,7 @@
       </table>
 
       <h3 align="center" id="Oita">大分県</h3>
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -4671,7 +4681,7 @@
       </table>
 
       <h3 align="center" id="Miyazaki">宮崎県</h3>
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
@@ -4694,7 +4704,7 @@
       </table>
 
       <h3 align="center" id="Kagosima">鹿児島県</h3>
-      <table border="1" align="center" id="TABLE">
+      <table border="1">
         <tr>
           <th>(主な)路線名</th>
           <th>駅名・(読み)</th>
