@@ -1,17 +1,16 @@
 html {
   height: 100%;
 }
-
 body {
   background: linear-gradient(
     75deg,
-    rgb(206, 217, 228),
-    rgba(205, 240, 240, 0.788)
+    rgb(217, 236, 247),
+    rgba(139, 202, 202, 0.856)
   );
   height: 100%;
 }
 section {
-  background: linear-gradient(45deg, rgb(217, 236, 208), rgb(169, 224, 180));
+  background: linear-gradient(45deg, rgb(241, 252, 237), rgb(150, 247, 130));
   margin: 0%;
 }
 table {
@@ -26,22 +25,40 @@ table {
 }
 
 h1 {
-  background-color: rgb(122, 236, 236);
+  background-color: rgb(62, 219, 224);
 }
 p {
-  background-color: rgb(137, 151, 228);
+  background-color: rgb(160, 210, 245);
 }
-#il ul li {
+p.maptitle {
+  background: linear-gradient(
+    75deg,
+    rgb(217, 236, 247),
+    rgba(139, 202, 202, 0.856)
+  );
+}
+p.syutten {
+  background: linear-gradient(
+    75deg,
+    rgb(217, 236, 247),
+    rgba(139, 202, 202, 0.856)
+  );
+  word-break: break-all;
+  max-width: 100%;
+}
+div.il ul li {
   display: inline;
 }
 
-#SCROLL {
+div.SCROLL {
   height: 150px;
   width: 97.5%;
   overflow: auto;
 }
 
 iframe {
-  height: 525px;
-  width: 100%;
+  display: block;
+  margin: auto;
+  height: 500px;
+  width: 95%;
 }

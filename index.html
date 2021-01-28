@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta
       name="description"
-      content="デレマスアイドルの同名駅を90駅以上巡ったドップラピットPがお送りする、
+      content="デレマスアイドルの同名駅を100駅近く巡ったドップラピットPがお送りする、
       様々なキャラクターの同名地に関する研究紹介ページ。同名地の現地訪問模様、同名地のデータベース。
       好きなキャラクターの同名地にお出かけしてみませんか?"
     />
@@ -15,38 +15,39 @@
       content="同名地研究プロジェクト,
     デレマスアイドル同名駅シリーズ,同名駅,同名地,駅,旅行,旅,データベース"
     />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@doppurapit" />
+    <meta property="og:url" content="https://samenameplace.web.app/" />
+    <meta property="og:title" content="同名地研究プロジェクト" />
+    <meta property="og:description" content="様々なキャラクターの同名地に関する研究紹介ページ。同名地の現地訪問模様、同名地のデータベース。" />
+    <meta property="og:image" content="https://samenameplace.web.app/%E7%94%BB/%E6%96%B0%E7%94%B014.jpg" />
     <link rel="stylesheet" type="text/css" href="index.css" />
     <title>同名地研究プロジェクト</title>
     <script type="text/javascript" src="clock.js"></script>
     <script type="text/javascript" src="img.js"></script>
+    <script type="text/javascript" src="map.js"></script>
   </head>
   <body>
     <h1>同名地研究プロジェクト</h1>
-    <div id="nowtoptext" ></div>
-    <img id="nowimg" width="300" height="540"></img>
-    <!--
-    <img
-      src="画/のの3.png"
-      onmouseover="src='画/のの1.png'"
-      onmouseout="src='画/のの3.png'"
-      alt="のの岳駅"
-      width="270"
-      height="480"
-    />
-    -->
-    <footer>
-      ©2015 BNEI
-    </footer>
+    <div id="nowtoptext"></div>
+    <img id="nowimg" width="300" height="540" />
+
+    <footer>©2015 BNEI</footer>
     <p><strong>時刻</strong></p>
     <div id="nowtime"></div>
     <p><strong>お知らせ</strong></p>
     <h2>
-      <em><a href="info.html">アイドルの同名地訪問写真募集!!!</a></em>
+      <a href="info.html">アイドルの同名地訪問写真募集!!!</a>
+    </h2>
+    <h2>
+      <a href="info2.html">同名地データが知りたい作品募集!!!</a>
     </h2>
 
     <p><strong>更新履歴</strong></p>
-    <div id="SCROLL">
-      <h3>2019/12/23 ホームページオープン!!</h3>
+    <div class="SCROLL">
+      <h3>2020/12/28 河内松原駅の画像データ更新(NEW!)</h3>
+      <h3>2020/12/23 ホームページオープン1周年!!</h3>
+      <h4>2019/12/23 ホームページオープン!!</h3>
       <h4>2019/12/29 持田駅の画像データ更新・表の一部修正</h4>
       <h4>2019/12/30 岡崎駅などの画像データ更新・表の一部修正</h4>
       <h4>
@@ -66,30 +67,48 @@
       </h4>
       <h4>2020/07/25 アイマスアイドル同名市町村データテーブル公開!!!</h4>
       <h4>2020/07/25 Q&Aに「同名地の基準」について追記</h4>
+      <h4>2020/08/06 「同名地の基準」に従い表の一部修正</h4>
+      <h4>2020/09/09 同名地データが知りたい作品募集開始!!</h4>
+      <h4>2020/09/09 「データ出典」・「ツイッター発信例」の追加</h4>
+      <h4>2020/09/09 越前東郷駅の画像データ更新</h4>
+      <h4>
+        2020/09/12 ミリマスアイドル(AS+MS)+876プロアイドル同名駅マップ公開!
+      </h4>
+      <h4>2020/10/12 シャニマス＆SideMアイドル同名駅マップ公開!</h4>
+      <h4>2020/11/02 神谷町駅などの画像データ更新・リンクの一部修正</h4>
+      <h4>2020/12/14 BanG Dream!同名駅データ公開!</h4>
+      <h4>2020/12/26 BanG Dream!＆ガルパン同名駅マップ公開!</h4>
+      <h4>2020/12/26 一部マップの内容修正</h4>
     </div>
-
-    <p><strong>総合メニュー</strong></p>
+    <p><strong>データ一覧総合メニュー</strong></p>
     <ul>
       <li>
-        <em><a href="SNPofcity.html">アイマスアイドル同名市町村データ</a></em>
+        <a href="index.html#top">アイマスアイドル同名駅データ</a>
+      </li>
+      <li>
+        <a href="SNPofcity.html">アイマスアイドル同名市町村データ</a>
+      </li>
+      <li>
+        <a href="BanGDreamofstation.html">BanG Dream!同名駅データ</a>
       </li>
     </ul>
 
-    <p><strong>デレマスアイドル同名駅マップ</strong></p>
-    <iframe
-      src="https://www.google.com/maps/d/u/0/embed?mid=1v5z4lOl1pvq4nQkSFurahJ9E8qwg6kzS"
-      width="640px"
-      height="480px"
-    ></iframe>
+    <div id="mapprint"></div>
+    <iframe id="map"></iframe>
+    <p class="maptitle">表示マップ(約30秒ごとに切り替わります)</p>
+    <ol>
+      <p id="mapnowtitle" class="maptitle"></p>
+    </ol>
+    <p class="maptitle"><a href="SNPmap.html">同名地マップデータ一覧はこちらから</a></p>
 
     <p><strong>ツイッター発信例</strong></p>
     <h2>
-      <em><a href="TwiEx.html">ページはこちらから</a></em>
+      <a href="TwiEx.html">ページはこちらから</a>
     </h2>
 
     <p><strong>Q&A</strong></p>
     <h2>
-      <em><a href="Q&A.html">ページはこちらから</a></em>
+      <a href="Q&A.html">ページはこちらから</a>
     </h2>
 
     <p>
@@ -99,9 +118,9 @@
       <li>
         <a href="index.html#Hokkaido">北海道</a>
       </li>
-      <div id="il">
+      <div class="il">
         <li>
-          <a href="index.html#Tohoku">東北</a>
+          東北
           <ul>
             <li><a href="index.html#Miyagi">宮城県</a></li>
             <li><a href="index.html#Aomori">青森県</a></li>
@@ -112,7 +131,7 @@
           </ul>
         </li>
         <li>
-          <a href="index.html#Kanto">関東</a>
+          関東
           <ul>
             <li><a href="index.html#Tokyo">東京都</a></li>
             <li><a href="index.html#Saitama">埼玉県</a></li>
@@ -124,7 +143,7 @@
           </ul>
         </li>
         <li>
-          <a href="index.html#Tube">中部</a>
+          中部
           <ul>
             <li><a href="index.html#Yamanasi">山梨県</a></li>
             <li><a href="index.html#Nagano">長野県</a></li>
@@ -139,7 +158,7 @@
           </ul>
         </li>
         <li>
-          <a href="index.html#Kansai">関西</a>
+          関西
           <ul>
             <li><a href="index.html#Osaka">大阪府</a></li>
             <li><a href="index.html#Kyoto">京都府</a></li>
@@ -150,7 +169,7 @@
           </ul>
         </li>
         <li>
-          <a href="index.html#Tusikoku">中国・四国</a>
+          中国・四国
           <ul>
             <li><a href="index.html#Hiroshima">広島県</a></li>
             <li><a href="index.html#Okayama">岡山県</a></li>
@@ -164,7 +183,7 @@
           </ul>
         </li>
         <li>
-          <a href="index.html#Kyusyu">九州</a>
+          九州
           <ul>
             <li><a href="index.html#Hukuoka">福岡県</a></li>
             <li><a href="index.html#Saga">佐賀県</a></li>
@@ -173,6 +192,7 @@
             <li><a href="index.html#Oita">大分県</a></li>
             <li><a href="index.html#Miyazaki">宮崎県</a></li>
             <li><a href="index.html#Kagosima">鹿児島県</a></li>
+            <li>沖縄県</li>
           </ul>
         </li>
       </div>
@@ -187,6 +207,7 @@
           <th>所在地</th>
           <th>画像データ</th>
         </tr>
+
         <tr>
           <th>函館本線</th>
           <th>
@@ -199,6 +220,7 @@
           <th>七飯町</th>
           <th>-</th>
         </tr>
+
         <tr>
           <th>函館本線</th>
           <th>
@@ -334,11 +356,47 @@
           <th>伊達市</th>
           <th>-</th>
         </tr>
+        <tr>
+          <th>富良野線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E8%A5%BF%E7%A5%9E%E6%A5%BD%E9%A7%85/@43.6822152,142.3913511,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0cc2f40e11bcef:0x3bf8dc672d2ffea0!8m2!3d43.6822152!4d142.3935398?hl=ja"
+              >西神楽駅</a
+            >
+          </th>
+          <th>神楽麗</th>
+          <th>旭川市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>宗谷本線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E5%8C%97%E6%98%9F%E9%A7%85/@44.4415127,142.4256593,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0dec58944b96cf:0x7a37b1f13a24b899!8m2!3d44.4415127!4d142.427848?hl=ja"
+              >北星駅</a
+            >
+          </th>
+          <th>星輝子</th>
+          <th>名寄市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>函館市電5系統</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E6%9F%8F%E6%9C%A8%E7%94%BA%E9%A7%85/@41.787927,140.7630464,17z/data=!3m1!4b1!4m5!3m4!1s0x5f9ef463eac0201b:0x4eb978086ad751f4!8m2!3d41.787927!4d140.765235?hl=ja"
+              >柏木町駅</a
+            >
+          </th>
+          <th>柏木翼</th>
+          <th>函館市</th>
+          <th>-</th>
+        </tr>
       </table>
     </section>
     <a href="index.html#top">メニュートップに戻る</a>
     <section>
-      <h2 id="Tohoku">東北</h2>
+      <h2>東北</h2>
       <h3 align="center" id="Miyagi">宮城県</h3>
       <table border="1">
         <tr>
@@ -396,12 +454,12 @@
           <th>新田美波</th>
           <th>登米市</th>
           <th>
-            <div><a href="画/新田1.png">美波の地獄の特訓中!!!(2019)</a></div>
-            <div><a href="画/新田2.png">ウインターヴィーナス(2019)</a></div>
-            <div><a href="画/新田14.jpg">夕暮れの新田駅(2020)</a></div>
-            <div><a href="画/新田15.jpg">駅名標と美波ちゃん(2020)</a></div>
+            <div><a href="画/新田1.png">美波の地獄の特訓中!!</a></div>
+            <div><a href="画/新田2.png">ウインターヴィーナス</a></div>
+            <div><a href="画/新田14.jpg">夕暮れの新田駅</a></div>
+            <div><a href="画/新田15.jpg">駅名標と美波ちゃん</a></div>
             <div>
-              <a href="画/新田16.jpg">伊豆沼の白鳥たちと・・・(2020)</a>
+              <a href="画/新田16.jpg">伊豆沼の白鳥たちと</a>
             </div>
           </th>
         </tr>
@@ -409,8 +467,32 @@
           <th>東北本線</th>
           <th>
             <a
+              href="https://www.google.co.jp/maps/place/%E6%9D%BE%E5%B1%B1%E7%94%BA%E9%A7%85/@38.5127034,141.0727015,17z/data=!3m1!4b1!4m5!3m4!1s0x5f890b1770628a8f:0x3ecd052bf3b87bc8!8m2!3d38.5127034!4d141.0748902?hl=ja"
+              >松山町駅</a
+            >
+          </th>
+          <th>松山久美子</th>
+          <th>大崎市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>東北本線</th>
+          <th>
+            <a
               href="https://www.google.co.jp/maps/place/%E7%99%BD%E7%9F%B3%E9%A7%85/@38.0035902,140.6240576,17z/data=!3m1!4b1!4m5!3m4!1s0x5f8a4202b06edf37:0xb28c20707b165c2b!8m2!3d38.0035902!4d140.6262463?hl=ja"
               >白石(しろいし)駅</a
+            >
+          </th>
+          <th>白石紬</th>
+          <th>白石市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>東北本線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E6%9D%B1%E7%99%BD%E7%9F%B3%E9%A7%85/@38.0350517,140.6487052,17z/data=!3m1!4b1!4m5!3m4!1s0x5f8a4053c9af1dd9:0x3246686e1e6068c!8m2!3d38.0350517!4d140.6508939?hl=ja"
+              >東白石駅</a
             >
           </th>
           <th>白石紬</th>
@@ -427,6 +509,66 @@
           </th>
           <th>山下次郎</th>
           <th>山元町</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>陸羽東線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E6%9D%B1%E5%A4%A7%E5%B4%8E%E9%A7%85/@38.6056041,140.8948514,17z/data=!3m1!4b1!4m5!3m4!1s0x5f8913457dc44619:0xc281b8e08825d13f!8m2!3d38.6056041!4d140.8970401?hl=ja"
+              >東大崎駅</a
+            >
+          </th>
+          <th>大崎甘奈,大崎甜花</th>
+          <th>大崎市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>陸羽東線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E8%A5%BF%E5%A4%A7%E5%B4%8E%E9%A7%85/@38.6300177,140.8874619,17z/data=!3m1!4b1!4m5!3m4!1s0x5f89149261085c5b:0xe0c18fb19e446f7d!8m2!3d38.6300177!4d140.8896506?hl=ja"
+              >西大崎駅</a
+            >
+          </th>
+          <th>大崎甘奈,大崎甜花</th>
+          <th>大崎市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>仙石線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E9%99%B8%E5%89%8D%E5%B1%B1%E4%B8%8B%E9%A7%85/@38.437524,141.2857145,17z/data=!3m1!4b1!4m5!3m4!1s0x5f89a378ced18995:0x3b3f42a9a7253b83!8m2!3d38.437524!4d141.2879032?hl=ja"
+              >陸前山下駅</a
+            >
+          </th>
+          <th>山下次郎</th>
+          <th>石巻市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>仙石線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E7%A6%8F%E7%94%B0%E7%94%BA%E9%A7%85/@38.2749497,140.9560007,17z/data=!3m1!4b1!4m5!3m4!1s0x5f898627d2509607:0xc527aee80d2f7332!8m2!3d38.2749497!4d140.9581894?hl=ja"
+              >福田町駅</a
+            >
+          </th>
+          <th>福田のり子</th>
+          <th>仙台市宮城野区</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>仙台市営地下鉄南北線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E6%B3%89%E4%B8%AD%E5%A4%AE%E9%A7%85/@38.3241957,140.8782739,17z/data=!3m1!4b1!4m5!3m4!1s0x5f8981305bfc68f9:0x337850afd7e16ea!8m2!3d38.3241957!4d140.8804626?hl=ja"
+              >泉中央駅</a
+            >
+          </th>
+          <th>大石泉</th>
+          <th>仙台市泉区</th>
           <th>-</th>
         </tr>
       </table>
@@ -464,6 +606,18 @@
           <th>弘前市</th>
           <th>-</th>
         </tr>
+        <tr>
+          <th>青い森鉄道線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E9%99%B8%E5%A5%A5%E5%B8%82%E5%B7%9D%E9%A7%85/@40.5630304,141.436871,17z/data=!3m1!4b1!4m5!3m4!1s0x5f9b506a25ec396f:0x19d7e326645729ef!8m2!3d40.5630304!4d141.4390597?hl=ja"
+              >陸奥市川駅</a
+            >
+          </th>
+          <th>市川雛菜</th>
+          <th>八戸市</th>
+          <th>-</th>
+        </tr>
       </table>
 
       <h3 align="center" id="Akita">秋田県</h3>
@@ -488,6 +642,18 @@
           <th>-</th>
         </tr>
         <tr>
+          <th>北上線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E5%B0%8F%E6%9D%BE%E5%B7%9D%E9%A7%85/@39.2936001,140.644199,17z/data=!3m1!4b1!4m5!3m4!1s0x5f8f10e4bbb22fbf:0x801353367b28e2f!8m2!3d39.2936001!4d140.6463877?hl=ja"
+              >小松川駅</a
+            >
+          </th>
+          <th>小松伊吹</th>
+          <th>横手市</th>
+          <th>-</th>
+        </tr>
+        <tr>
           <th>秋田内陸縦貫鉄道秋田内陸線</th>
           <th>
             <a
@@ -499,20 +665,18 @@
           <th>北秋田市</th>
           <th>-</th>
         </tr>
-        <!--駅名改称(縄文小ヶ田駅)により対象外(緒方智絵里→緒方駅があるため)
         <tr>
           <th>秋田内陸縦貫鉄道秋田内陸線</th>
           <th>
             <a
-              href="https://www.google.co.jp/maps/place/%E5%B0%8F%E3%83%B6%E7%94%B0%E9%A7%85/@40.2050115,140.3469592,17z/data=!3m1!4b1!4m5!3m4!1s0x5f9abbe88f41d0e1:0x21ac1a9ded6bd051!8m2!3d40.2050115!4d140.3491479?hl=ja"
-              >小ケ田(おがた)駅</a
+              href="https://www.google.co.jp/maps/place/%E7%BE%BD%E5%BE%8C%E5%A4%AA%E7%94%B0%E9%A7%85/@39.6271697,140.5720795,17z/data=!3m1!4b1!4m5!3m4!1s0x5f8f90127694db91:0xfeb5601a878922de!8m2!3d39.6271697!4d140.5742682?hl=ja"
+              >羽後太田駅</a
             >
           </th>
-          <th>緒方智絵里</th>
-          <th>北秋田市</th>
+          <th>太田優</th>
+          <th>仙北市</th>
           <th>-</th>
         </tr>
-        -->
       </table>
 
       <h3 align="center" id="Iwate">岩手県</h3>
@@ -537,9 +701,9 @@
           <th>
             <div><a href="画/みやこ1.png">駅前と都ちゃん1</a></div>
             <div><a href="画/みやこ2.png">駅前と都ちゃん2</a></div>
-            <div><a href="画/みやこ3.jpg">おめでとう！三陸鉄道!!!</a></div>
+            <div><a href="画/みやこ3.jpg">おめでとう!三陸鉄道!!!</a></div>
             <div><a href="画/みやこ4.jpg">3.11を忘れない</a></div>
-            <div><a href="画/みやこ5.png">ご当地ヒーローと都ちゃん</a></div>
+            <div><a href="画/みやこ5.png">ご当地ヒーローと</a></div>
           </th>
         </tr>
         <tr>
@@ -552,6 +716,18 @@
           </th>
           <th>北上麗花</th>
           <th>北上市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>八戸線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E9%99%B8%E4%B8%AD%E4%B8%AD%E9%87%8E%E9%A7%85/@40.3050161,141.7856595,17z/data=!3m1!4b1!4m5!3m4!1s0x5f84bcc6773321bf:0x6428bf97857bcd!8m2!3d40.3050161!4d141.7878482?hl=ja"
+              >陸中中野駅</a
+            >
+          </th>
+          <th>中野有香</th>
+          <th>洋野町</th>
           <th>-</th>
         </tr>
       </table>
@@ -603,9 +779,43 @@
           </th>
           <th>棟方愛海</th>
           <th>鶴岡市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>奥羽本線</th>
           <th>
-            -
+            <a
+              href="https://www.google.co.jp/maps/place/%E5%A4%A9%E7%AB%A5%E9%A7%85/@38.3600615,140.3672145,17z/data=!3m1!4b1!4m5!3m4!1s0x5f8bc5a8817e301d:0x4adccc66dec54dc6!8m2!3d38.3600615!4d140.3694032?hl=ja"
+              >天童(てんどう)駅</a
+            >
           </th>
+          <th>天道輝</th>
+          <th>天童市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>米坂線</th>
+          <th>
+            <a
+              href="https://www.google.com/maps/place/%E7%BE%BD%E5%89%8D%E5%B0%8F%E6%9D%BE%E9%A7%85/@38.0047601,140.0463422,17z/data=!3m1!4b1!4m5!3m4!1s0x5f8afc249d9c4bed:0xf43b739ecc162749!8m2!3d38.0047601!4d140.0485309?hl=ja-JP"
+              >羽前小松駅</a
+            >
+          </th>
+          <th>小松伊吹</th>
+          <th>川西町</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>米坂線</th>
+          <th>
+            <a
+              href="https://www.google.com/maps/place/%E7%BE%BD%E5%89%8D%E6%A4%BF%E9%A7%85/@38.0386435,139.992012,17z/data=!3m1!4b1!4m5!3m4!1s0x5f8b020412f09e23:0x144a2347e73df42e!8m2!3d38.0386435!4d139.9942007?hl=ja-JP"
+              >羽前椿駅</a
+            >
+          </th>
+          <th>江上椿</th>
+          <th>飯豊町</th>
+          <th>-</th>
         </tr>
       </table>
 
@@ -659,7 +869,7 @@
             <div><a href="画/おいかわ2.jpg">吹雪のおいかわ駅2</a></div>
             <div><a href="画/おいかわ3.jpg">吹雪のおいかわ駅3</a></div>
             <div>
-              <a href="画/おいかわ4.jpg">吹雪で先が何も見えないです～</a>
+              <a href="画/おいかわ4.jpg">先が何も見えないです～</a>
             </div>
             <div><a href="画/おいかわ5.jpg">マルフク看板!!!</a></div>
           </th>
@@ -712,6 +922,18 @@
           <th>常磐線</th>
           <th>
             <a
+              href="https://www.google.co.jp/maps/place/%E7%A3%90%E5%9F%8E%E5%A4%AA%E7%94%B0%E9%A7%85/@37.6051665,140.9893068,17z/data=!3m1!4b1!4m5!3m4!1s0x602095980185f55b:0xdd92f17dc068feef!8m2!3d37.6051665!4d140.9914955?hl=ja"
+              >磐城太田駅</a
+            >
+          </th>
+          <th>太田優</th>
+          <th>南相馬市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>常磐線</th>
+          <th>
+            <a
               href="https://www.google.co.jp/maps/place/%E5%8F%8C%E8%91%89%E9%A7%85/@37.4540453,141.0036458,17z/data=!3m1!4b1!4m5!3m4!1s0x6020e82c61b2a6d5:0x7b458427ea7be3a8!8m2!3d37.4540453!4d141.0058345?hl=ja"
               >双葉駅</a
             >
@@ -720,10 +942,10 @@
           <th>双葉町</th>
           <th>
             <div>
-              <a href="画/双葉1.jpg">駅名標と杏ちゃん1byぱるぷんてP</a>
+              <a href="画/双葉1.jpg">復活瞑想byぱるぷんてP</a>
             </div>
             <div>
-              <a href="画/双葉2.jpg">エレベーター使おう?byぱるぷんてP</a>
+              <a href="画/双葉2.jpg">エレベーターbyぱるぷんてP</a>
             </div>
             <div><a href="画/双葉3.jpg">駅名標と杏ちゃん2</a></div>
             <div><a href="画/双葉4.png">駅名標と杏ちゃん3</a></div>
@@ -754,7 +976,7 @@
           <th>常磐線</th>
           <th>
             <a
-              href="https://www.google.co.jp/maps/place/%E6%A4%8D%E7%94%B0%E9%A7%85/@36.9204611,140.7942709,17z/data=!3m1!4b1!4m5!3m4!1s0x60210ce704e754d1:0xf9ed5f8c0f734b63!8m2!3d36.9204611!4d140.7964596?hl=ja"
+              href="https://www.google.co.jp/maps/place/%E6%A4%8D%E7%94%B0%E9%A7%85/@36.9204611,140.7942709,17z/data=!3m1!4b1!4m5!3m4!1s0x60210ce704e754d1:0xf9ed5f8c0f734b63!8m2!3d36.9204599!4d140.7964575?hl=ja"
               >植田(うえだ)駅</a
             >
           </th>
@@ -785,7 +1007,7 @@
           <th>阿武隈急行線</th>
           <th>
             <a
-              href="https://www.google.co.jp/maps/place/%E6%96%B0%E7%94%B0%E9%A7%85/@37.8379627,140.5909955,17z/data=!3m1!4b1!4m5!3m4!1s0x5f8a63356f56c45b:0x541f634431ddeed8!8m2!3d37.8379627!4d140.5931842?hl=ja"
+              href="https://www.google.co.jp/maps/place/%E6%96%B0%E7%94%B0%E9%A7%85/@37.8377671,140.5908304,17z/data=!3m1!4b1!4m5!3m4!1s0x5f8a63356f4a56dd:0x3fcd7ca60223763b!8m2!3d37.8377671!4d140.5930191?hl=ja"
               >新田駅</a
             >
           </th>
@@ -797,7 +1019,6 @@
             <div><a href="画/新田10.jpg">広がる田園風景</a></div>
             <div><a href="画/新田11.jpg">佐藤商店だぞ♡</a></div>
             <div><a href="画/新田12.png">高橋線でドヤァ</a></div>
-            <div><a href="画/新田13.png">高橋橋で仁王立ち</a></div>
           </th>
         </tr>
         <tr>
@@ -825,7 +1046,7 @@
           <th>
             <div><a href="画/泉1.jpg">駅前とイズミン</a></div>
             <div><a href="画/泉3.jpg">駅名標とイズミン</a></div>
-            <div><a href="画/泉2.jpg">駅名標と奥に見えるのは・・・</a></div>
+            <div><a href="画/泉2.jpg">奥に見えるのは・・・</a></div>
             <div><a href="画/泉4.jpg">佐藤工業だぞ♡</a></div>
           </th>
         </tr>
@@ -833,7 +1054,7 @@
     </section>
     <a href="index.html#top">メニュートップに戻る</a>
     <section>
-      <h2 id="Kanto">関東</h2>
+      <h2>関東</h2>
       <h3 align="center" id="Tokyo">東京都</h3>
       <table border="1">
         <tr>
@@ -862,11 +1083,19 @@
           </th>
         </tr>
         <tr>
-          <th>山手線</th>
+          <th>山手線<br />東武東上線<br />東京メトロ有楽町線</th>
           <th>
             <a
               href="https://www.google.co.jp/maps/place/池袋駅/@35.7295071,139.7087114,17z/data=!3m1!4b1!4m5!3m4!1s0x60188d5d4043e0dd:0x213775d25d2b034d!8m2!3d35.7295028!4d139.7109001"
               >池袋駅</a
+            ><br />
+            <a
+              href="https://www.google.co.jp/maps/place/%E5%8C%97%E6%B1%A0%E8%A2%8B%E9%A7%85/@35.7408394,139.7145536,17z/data=!3m1!4b1!4m5!3m4!1s0x6018929e0a505c67:0x5514e0eb13222cc1!8m2!3d35.7408394!4d139.7167423?hl=ja"
+              >北池袋駅</a
+            ><br />
+            <a
+              href="https://www.google.co.jp/maps/place/%E6%9D%B1%E6%B1%A0%E8%A2%8B%E9%A7%85/@35.7260173,139.716809,17z/data=!3m1!4b1!4m5!3m4!1s0x60188d6db5d1b791:0xed9d18f4ae950c4a!8m2!3d35.7260173!4d139.7189977?hl=ja"
+              >東池袋駅</a
             >
           </th>
           <th>池袋晶葉</th>
@@ -892,11 +1121,19 @@
           <th>-</th>
         </tr>
         <tr>
-          <th>中央線</th>
+          <th>中央線<br />中央線<br />東京メトロ丸ノ内線</th>
           <th>
             <a
               href="https://www.google.co.jp/maps/place/中野駅/@35.7058015,139.663589,17z/data=!3m1!4b1!4m5!3m4!1s0x6018f296b32f3571:0x568104f2ac34074e!8m2!3d35.7057972!4d139.6657777"
               >中野駅</a
+            ><br />
+            <a
+              href="https://www.google.co.jp/maps/place/%E6%9D%B1%E4%B8%AD%E9%87%8E%E9%A7%85/@35.7062291,139.6816215,17z/data=!3m1!4b1!4m5!3m4!1s0x6018f2c83ab1885b:0xe192669bb7699073!8m2!3d35.7062291!4d139.6838102?hl=ja"
+              >東中野駅</a
+            ><br />
+            <a
+              href="https://www.google.co.jp/maps/place/%E6%96%B0%E4%B8%AD%E9%87%8E%E9%A7%85/@35.6974924,139.6667487,17z/data=!3m1!4b1!4m5!3m4!1s0x6018f2ea276199eb:0xdf15a498270ba2f9!8m2!3d35.6974924!4d139.6689374?hl=ja"
+              >新中野駅</a
             >
           </th>
           <th>中野有香</th>
@@ -905,7 +1142,7 @@
             <div><a href="画/有香1.png">駅前と有香ちゃん</a></div>
             <div><a href="画/有香2.png">駅名標と有香ちゃん</a></div>
             <div><a href="画/有香3.png">サンプラザ中野と有香ちゃん</a></div>
-            <div><a href="画/有香4.png">中野ブロードウェイと有香ちゃん</a></div>
+            <div><a href="画/有香4.png">中野BWと有香ちゃん</a></div>
             <div><a href="画/有香5.png">路地と有香ちゃん</a></div>
           </th>
         </tr>
@@ -962,6 +1199,18 @@
           </th>
         </tr>
         <tr>
+          <th>京葉線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E6%96%B0%E6%9C%A8%E5%A0%B4%E9%A7%85/@35.6459022,139.8245065,17z/data=!3m1!4b1!4m5!3m4!1s0x6018883b2d2f03bd:0xb8ee189068c92571!8m2!3d35.6459022!4d139.8266952?hl=ja"
+              >新木場駅</a
+            >
+          </th>
+          <th>木場真奈美</th>
+          <th>江東区</th>
+          <th>-</th>
+        </tr>
+        <tr>
           <th>八高線</th>
           <th>
             <a
@@ -974,11 +1223,15 @@
           <th>-</th>
         </tr>
         <tr>
-          <th>常磐線</th>
+          <th>常磐線<br />東京メトロ千代田線</th>
           <th>
             <a
               href="https://www.google.co.jp/maps/place/%E7%B6%BE%E7%80%AC%E9%A7%85/@35.7621784,139.8228033,17z/data=!3m1!4b1!4m5!3m4!1s0x60188fb9cc8beb47:0x48450c07579a074!8m2!3d35.7621784!4d139.824992?hl=ja"
               >綾瀬駅</a
+            ><br />
+            <a
+              href="https://www.google.co.jp/maps/place/%E5%8C%97%E7%B6%BE%E7%80%AC%E9%A7%85/@35.7770135,139.8299125,17z/data=!3m1!4b1!4m5!3m4!1s0x60188fdd2ece8065:0xe3e1960541dced6!8m2!3d35.7770135!4d139.8321012?hl=ja"
+              >北綾瀬駅</a
             >
           </th>
           <th>綾瀬穂乃香</th>
@@ -1022,6 +1275,19 @@
           </th>
         </tr>
         <tr>
+          <th>東京メトロ日比谷線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E7%A5%9E%E8%B0%B7%E7%94%BA%E9%A7%85/@35.6631176,139.7429939,17z/data=!3m1!4b1!4m5!3m4!1s0x60188b96d95eb69f:0xab4f2e936c8eabfc!8m2!3d35.6631176!4d139.7451826?hl=ja"
+              >神谷町駅</a
+            >
+          </th>
+          <th>神谷奈緒</th>
+          <th>港区</th>
+          <th><div><a href="画/神谷5.png">駅前の奈緒ちゃん</a></div>
+            <div><a href="画/神谷6.png">昔、テレビ局がありました</a></div></th>
+        </tr>
+        <tr>
           <th>都営三田線</th>
           <th>
             <a
@@ -1031,6 +1297,56 @@
           </th>
           <th>春日未来</th>
           <th>文京区</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>西武池袋線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E6%A4%8E%E5%90%8D%E7%94%BA%E9%A7%85/@35.7264722,139.6927334,17z/data=!3m1!4b1!4m5!3m4!1s0x60188d54730f7ba5:0x356fb2a22cd0c1a0!8m2!3d35.7264722!4d139.6949221?hl=ja"
+              >椎名町駅</a
+            >
+          </th>
+          <th>椎名法子</th>
+          <th>豊島区</th>
+          <th><div><a href="画/椎名1.png">椎名町駅にやってきた！</a></div>
+            <div><a href="画/椎名2.png">ドーナツ屋さんを発見!?</a></div></th>
+        </tr>
+        <tr>
+          <th>西武新宿線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E6%AD%A6%E8%94%B5%E9%96%A2%E9%A7%85/@35.7276179,139.5741748,17z/data=!3m1!4b1!4m5!3m4!1s0x6018eefae5aedb35:0x53d9d0688f51b638!8m2!3d35.7276179!4d139.5763635?hl=ja"
+              >武蔵関駅</a
+            >
+          </th>
+          <th>関裕美</th>
+          <th>練馬区</th>
+          <th><div><a href="画/武蔵関.png">次に「恐竜」いるかも？</a></div></th>
+        </tr>
+        <tr>
+          <th>西武多摩湖線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E6%AD%A6%E8%94%B5%E5%A4%A7%E5%92%8C%E9%A7%85/@35.7562427,139.4420343,17z/data=!3m1!4b1!4m5!3m4!1s0x6018e0caf5c5d229:0xf200a6cd545a540d!8m2!3d35.7562427!4d139.444223?hl=ja"
+              >武蔵大和駅</a
+            >
+          </th>
+          <th>大和亜季</th>
+          <th>世田谷区</th>
+          <th><div><a href="画/武蔵大和1.png">エレベーターであります！！</a></div>
+            <div><a href="画/武蔵大和2.png">出口はあちらです</a></div></th>
+        </tr>
+        <tr>
+          <th>京急本線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E6%96%B0%E9%A6%AC%E5%A0%B4%E9%A7%85/@35.616516,139.739278,17z/data=!3m1!4b1!4m5!3m4!1s0x60188a663dbb1dd3:0x31f564ef1a3f65e!8m2!3d35.616516!4d139.7414667?hl=ja"
+              >新馬場駅</a
+            >
+          </th>
+          <th>馬場このみ</th>
+          <th>品川区</th>
           <th>-</th>
         </tr>
         <tr>
@@ -1092,18 +1408,54 @@
           </th>
         </tr>
         <tr>
-          <th>京王線<br />小田急小田原線</th>
+          <th>東急多摩川線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E6%AD%A6%E8%94%B5%E6%96%B0%E7%94%B0%E9%A7%85/@35.5679766,139.6900144,17z/data=!3m1!4b1!4m5!3m4!1s0x6018600a43b369b5:0xd2b835d2fab1775b!8m2!3d35.5679766!4d139.6922031?hl=ja"
+              >武蔵新田駅</a
+            >
+          </th>
+          <th>新田美波</th>
+          <th>大田区</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>京王線</th>
           <th>
             <a
               href="https://www.google.co.jp/maps/place/%E4%B8%8A%E5%8C%97%E6%B2%A2%E9%A7%85/@35.6688702,139.6211952,17z/data=!3m1!4b1!4m5!3m4!1s0x6018f233c00c6d07:0xc6b7e5a2f43dd2da!8m2!3d35.6688702!4d139.6233839?hl=ja"
               >上北沢駅</a
-            ><br />
-            <a
-              href="https://www.google.co.jp/maps/place/%E4%B8%8B%E5%8C%97%E6%B2%A2%E9%A7%85/@35.6615709,139.6648094,17z/data=!3m1!4b1!4m5!3m4!1s0x6018f36b9a296133:0x66c43a9f356d5e5d!8m2!3d35.6615709!4d139.6669981?hl=ja"
-              >下北沢駅</a
             >
           </th>
           <th>北沢志保</th>
+          <th>世田谷区</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>小田急小田原線<br />小田急小田原線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E4%B8%8B%E5%8C%97%E6%B2%A2%E9%A7%85/@35.6615709,139.6648094,17z/data=!3m1!4b1!4m5!3m4!1s0x6018f36b9a296133:0x66c43a9f356d5e5d!8m2!3d35.6615709!4d139.6669981?hl=ja"
+              >下北沢駅</a
+            ><br />
+            <a
+              href="https://www.google.co.jp/maps/place/%E4%B8%8B%E5%8C%97%E6%B2%A2%E9%A7%85/@35.6615709,139.6648094,17z/data=!3m1!4b1!4m5!3m4!1s0x6018f36b9a296133:0x66c43a9f356d5e5d!8m2!3d35.6615709!4d139.6669981?hl=ja"
+              >東北沢駅</a
+            >
+          </th>
+          <th>北沢志保</th>
+          <th>世田谷区</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>京王井の頭線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E6%9D%B1%E6%9D%BE%E5%8E%9F%E9%A7%85/@35.6626447,139.6532884,17z/data=!3m1!4b1!4m5!3m4!1s0x6018f30c796b3291:0x6e2a62d55b5581f4!8m2!3d35.6626447!4d139.6554771?hl=ja"
+              >東松原駅</a
+            >
+          </th>
+          <th>松原早耶</th>
           <th>世田谷区</th>
           <th>-</th>
         </tr>
@@ -1117,9 +1469,7 @@
           </th>
           <th>硲道夫</th>
           <th>八王子市</th>
-          <th>
-            -
-          </th>
+          <th>-</th>
         </tr>
         <tr>
           <th>小田急小田原線</th>
@@ -1139,6 +1489,7 @@
             <div><a href="画/喜多見5.png">喜多見家ダヨ～</a></div>
           </th>
         </tr>
+
         <tr>
           <th>つくばエクスプレス</th>
           <th>
@@ -1178,6 +1529,18 @@
           <th>対応アイドル</th>
           <th>所在地</th>
           <th>画像データ</th>
+        </tr>
+        <tr>
+          <th>京浜東北線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E8%A5%BF%E5%B7%9D%E5%8F%A3%E9%A7%85/@35.8155371,139.702458,17z/data=!3m1!4b1!4m5!3m4!1s0x601894a4e6868e7b:0xd858bdbcdd9ac2c4!8m2!3d35.8155371!4d139.7046467?hl=ja"
+              >西川口駅</a
+            >
+          </th>
+          <th>西川保奈美</th>
+          <th>川口市</th>
+          <th>-</th>
         </tr>
         <tr>
           <th>川越線</th>
@@ -1231,6 +1594,19 @@
           <th>東武東上線</th>
           <th>
             <a
+              href="https://www.google.co.jp/maps/place/%E6%9F%B3%E7%80%AC%E5%B7%9D%E9%A7%85/@35.8305418,139.5603186,17z/data=!3m1!4b1!4m5!3m4!1s0x6018c285b34da98b:0x1975cb71fb6b775d!8m2!3d35.8305418!4d139.5625073?hl=ja"
+              >柳瀬川駅</a
+            >
+          </th>
+          <th>柳瀬美由紀</th>
+          <th>志木市</th>
+          <th><div><a href="画/柳瀬川1.png">駅名標と美由紀ちゃん</a></div>
+            <div><a href="画/柳瀬川2.png">電車にビックリ！</a></div></th>
+        </tr>
+        <tr>
+          <th>東武東上線</th>
+          <th>
+            <a
               href="https://www.google.co.jp/maps/place/%E8%8B%A5%E8%91%89%E9%A7%85/@35.949105,139.4065413,17z/data=!3m1!4b1!4m5!3m4!1s0x6018d6f92b92ee5f:0x2aa166446b0218a!8m2!3d35.949105!4d139.40873?hl=ja"
               >若葉駅</a
             >
@@ -1254,6 +1630,30 @@
           </th>
           <th>高坂海美</th>
           <th>東松山市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>東武東上線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E6%9D%B1%E6%9D%BE%E5%B1%B1%E9%A7%85/@36.0348746,139.3995874,17z/data=!3m1!4b1!4m5!3m4!1s0x6018d5219db744f5:0x62d482de63a4cf!8m2!3d36.0348746!4d139.4017761?hl=ja"
+              >東松山駅</a
+            >
+          </th>
+          <th>松山久美子</th>
+          <th>東松山市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>秩父鉄道秩父本線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E6%AD%A6%E5%B7%9E%E8%8D%92%E6%9C%A8%E9%A7%85/@36.1625386,139.4863313,17z/data=!3m1!4b1!4m5!3m4!1s0x601f2e7e16664eff:0xdea55ac68b49862e!8m2!3d36.1625386!4d139.48852?hl=ja"
+              >武州荒木駅</a
+            >
+          </th>
+          <th>荒木比奈</th>
+          <th>行田市</th>
           <th>-</th>
         </tr>
         <tr>
@@ -1284,6 +1684,30 @@
           </th>
           <th>樋口円香</th>
           <th>長瀞町</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>秩父鉄道秩父本線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E6%AD%A6%E5%B7%9E%E6%97%A5%E9%87%8E%E9%A7%85/@35.9540642,139.0191686,17z/data=!3m1!4b1!4m5!3m4!1s0x601eb5e9ff43957b:0xf1c6405bd37e9645!8m2!3d35.9540642!4d139.0213573?hl=ja"
+              >武州日野駅</a
+            >
+          </th>
+          <th>日野茜</th>
+          <th>秩父市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>秩父鉄道秩父本線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E4%B8%89%E5%B3%B0%E5%8F%A3%E9%A7%85/@35.9599195,138.9767496,17z/data=!3m1!4b1!4m5!3m4!1s0x601eb6bd24b9959b:0x7b99d99db889d95f!8m2!3d35.9599195!4d138.9789383?hl=ja"
+              >三峰口駅</a
+            >
+          </th>
+          <th>三峰結華</th>
+          <th>秩父市</th>
           <th>-</th>
         </tr>
         <tr>
@@ -1359,11 +1783,15 @@
           </th>
         </tr>
         <tr>
-          <th>御殿場線</th>
+          <th>御殿場線<br />小田急小田原線</th>
           <th>
             <a
               href="https://www.google.co.jp/maps/place/%E6%9D%BE%E7%94%B0%E9%A7%85/@35.346822,139.1353591,17z/data=!3m1!4b1!4m5!3m4!1s0x6019a743c59ab2f7:0xc9bad1b3e97be63d!8m2!3d35.346822!4d139.1375478?hl=ja"
               >松田駅</a
+            ><br />
+            <a
+              href="https://www.google.co.jp/maps/place/%E6%96%B0%E6%9D%BE%E7%94%B0%E9%A7%85/@35.3445938,139.1372549,17z/data=!3m1!4b1!4m5!3m4!1s0x6019a741827e607b:0x69d10037b5c96d7a!8m2!3d35.3445938!4d139.1394436?hl=ja"
+              >新松田駅</a
             >
           </th>
           <th>松田亜利沙</th>
@@ -1407,6 +1835,66 @@
           </th>
         </tr>
         <tr>
+          <th>京王相模原線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E8%8B%A5%E8%91%89%E5%8F%B0%E9%A7%85/@35.619278,139.4702974,17z/data=!3m1!4b1!4m5!3m4!1s0x6018fb16a2099067:0xf218fafc9ece0125!8m2!3d35.619278!4d139.4724861?hl=ja"
+              >若葉台駅</a
+            >
+          </th>
+          <th>日下部若葉</th>
+          <th>川崎市麻生区</th>
+          <th><div><a href="画/若葉台.png">駅前の若葉ちゃん</a></div></th>
+        </tr>
+        <tr>
+          <th>京急本線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E5%8D%97%E5%A4%AA%E7%94%B0%E9%A7%85/@35.436873,139.6117813,17z/data=!3m1!4b1!4m5!3m4!1s0x60185c8142b19879:0x97295be2505638eb!8m2!3d35.436873!4d139.61397?hl=ja"
+              >南太田駅</a
+            >
+          </th>
+          <th>太田優</th>
+          <th>横浜市南区</th>
+          <th><div><a href="画/南太田.png">駅名標と優ちゃん</a></div></th>
+        </tr>
+        <tr>
+          <th>京急久里浜線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E4%B8%89%E6%B5%A6%E6%B5%B7%E5%B2%B8%E9%A7%85/@35.1883642,139.6513226,17z/data=!3m1!4b1!4m5!3m4!1s0x60183dcdafbbef7f:0xb1350bd582ffbede!8m2!3d35.1883642!4d139.6535113?hl=ja"
+              >三浦海岸駅</a
+            >
+          </th>
+          <th>三浦あずさ</th>
+          <th>三浦市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>相鉄線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E6%98%9F%E5%B7%9D%E9%A7%85/@35.458881,139.5925769,17z/data=!3m1!4b1!4m5!3m4!1s0x60185bef28f84025:0x119a2f213a8697c9!8m2!3d35.458881!4d139.5947656?hl=ja"
+              >星川駅</a
+            >
+          </th>
+          <th>星輝子</th>
+          <th>横浜市保土ヶ谷区</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>相鉄いずみ野線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E3%81%84%E3%81%9A%E3%81%BF%E4%B8%AD%E5%A4%AE%E9%A7%85/@35.4152459,139.48507,17z/data=!3m1!4b1!4m5!3m4!1s0x601851277e27d0df:0x26dd163e88f38a08!8m2!3d35.4152459!4d139.4872587?hl=ja"
+              >いずみ中央駅</a
+            >
+          </th>
+          <th>大石泉,和泉愛依</th>
+          <th>横浜市泉区</th>
+          <th>-</th>
+        </tr>
+        <tr>
           <th>横浜市営地下鉄ブルーライン</th>
           <th>
             <a
@@ -1416,9 +1904,24 @@
           </th>
           <th>舞田類</th>
           <th>横浜市南区</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>金沢シーサイドライン</th>
           <th>
-            -
+            <a
+              href="https://www.google.co.jp/maps/place/%E4%B8%A6%E6%9C%A8%E5%8C%97%E9%A7%85/@35.3719099,139.6405092,17z/data=!3m1!4b1!4m5!3m4!1s0x601843ae5357d1ed:0xd82ad197084feb19!8m2!3d35.3719099!4d139.6426979?hl=ja"
+              >並木北駅</a
+            ><br />
+            <a
+              href="https://www.google.co.jp/maps/place/%E4%B8%A6%E6%9C%A8%E4%B8%AD%E5%A4%AE%E9%A7%85/@35.3654381,139.640767,17z/data=!3m1!4b1!4m5!3m4!1s0x601843b12b435b5d:0xd117f623f3368b18!8m2!3d35.3654381!4d139.6429557?hl=ja"
+              >並木中央駅</a
+            >
           </th>
+          <th>並木芽衣子</th>
+          <th>横浜市金沢区</th>
+          <th><div><a href="画/並木1.png">案内標識と芽衣子ちゃん</a></div>
+            <div><a href="画/並木2.png">並木中央駅前の並木道</a></div></th>
         </tr>
       </table>
 
@@ -1492,6 +1995,18 @@
           </th>
         </tr>
         <tr>
+          <th>総武本線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E6%97%AD%E9%A7%85/@35.7220089,140.6527507,17z/data=!3m1!4b1!4m5!3m4!1s0x6022e1be44bdf50f:0xd2c39a8cedf0001f!8m2!3d35.7220089!4d140.6549394?hl=ja"
+              >旭(あさひ)駅</a
+            >
+          </th>
+          <th>芹沢あさひ</th>
+          <th>旭市</th>
+          <th>-</th>
+        </tr>
+        <tr>
           <th>外房線</th>
           <th>
             <a
@@ -1505,15 +2020,18 @@
             <div><a href="画/未央1.png">駅名標と未央です!!!1</a></div>
             <div><a href="画/未央2.png">駅名標と未央です!!!2</a></div>
             <div><a href="画/未央3.png">駅名標と未央です!!!3</a></div>
-            <div><a href="画/未央4.png">駅名標と未央です!!!4</a></div>
           </th>
         </tr>
         <tr>
-          <th>外房線</th>
+          <th>外房線<br />いすみ鉄道いすみ線</th>
           <th>
             <a
               href="https://www.google.co.jp/maps/place/%E5%A4%A7%E5%8E%9F%E9%A7%85/@35.2512209,140.3888475,17z/data=!3m1!4b1!4m5!3m4!1s0x603d34dfc0391145:0x8cb3985f7622aee1!8m2!3d35.2512209!4d140.3910362?hl=ja"
               >大原駅</a
+            ><br />
+            <a
+              href="https://www.google.co.jp/maps/place/%E8%A5%BF%E5%A4%A7%E5%8E%9F%E9%A7%85/@35.2604973,140.3756816,17z/data=!3m1!4b1!4m5!3m4!1s0x603d35326800afcb:0x3442ffd3d696932a!8m2!3d35.2604973!4d140.3778703?hl=ja"
+              >西大原駅</a
             >
           </th>
           <th>大原みちる</th>
@@ -1585,6 +2103,30 @@
           <th>-</th>
         </tr>
         <tr>
+          <th>成田線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E4%B8%8B%E7%B7%8F%E7%A5%9E%E5%B4%8E%E9%A7%85/@35.8949273,140.4087362,17z/data=!3m1!4b1!4m5!3m4!1s0x60225f3d5bead853:0x24d2b2796c6ddb15!8m2!3d35.8949273!4d140.4109249?hl=ja"
+              >下総神崎駅</a
+            >
+          </th>
+          <th>神崎蘭子</th>
+          <th>神崎町</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>成田線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E4%B8%8B%E7%B7%8F%E6%A9%98%E9%A7%85/@35.8187771,140.6999649,17z/data=!3m1!4b1!4m5!3m4!1s0x60231d3f04c54c6f:0x939815e88a49c989!8m2!3d35.8187771!4d140.7021536?hl=ja"
+              >下総橘駅</a
+            >
+          </th>
+          <th>橘ありす,橘志狼</th>
+          <th>東庄町</th>
+          <th>-</th>
+        </tr>
+        <tr>
           <th>東武野田線</th>
           <th>
             <a
@@ -1604,6 +2146,18 @@
           <th>新京成線</th>
           <th>
             <a
+              href="https://www.google.co.jp/maps/place/%E3%81%BF%E3%81%AE%E3%82%8A%E5%8F%B0%E9%A7%85/@35.7893506,139.9272338,17z/data=!3m1!4b1!4m5!3m4!1s0x601884870cfec2e1:0xa6ea897a430295b9!8m2!3d35.7893506!4d139.9294225?hl=ja"
+              >みのり台駅</a
+            >
+          </th>
+          <th>渡辺みのり</th>
+          <th>松戸市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>新京成線</th>
+          <th>
+            <a
               href="https://www.google.co.jp/maps/place/%E4%B8%89%E5%92%B2%E9%A7%85/@35.7490505,140.0263576,17z/data=!3m1!4b1!4m5!3m4!1s0x60227f84af1da7cf:0xdc313e35a5c5810!8m2!3d35.7490505!4d140.0285463?hl=ja"
               >三咲(みさき)駅</a
             >
@@ -1614,13 +2168,13 @@
             <div><a href="画/みさき1.png">駅名標とみさきちゃん1</a></div>
             <div><a href="画/みさき2.png">駅名標とみさきちゃん2</a></div>
             <div>
-              <a href="画/みさき3.png">県民の森で音葉さんの森林浴夕焼け</a>
+              <a href="画/みさき3.png">県民の森で森林浴</a>
             </div>
             <div>
-              <a href="画/みさき4.png">県民の森で音葉さんの森林浴夕暮れ</a>
+              <a href="画/みさき4.png">今回は音葉さんに</a>
             </div>
             <div>
-              <a href="画/みさき5.png">県民の森で音葉さんの森林浴夜前</a>
+              <a href="画/みさき5.png">来て頂きました</a>
             </div>
           </th>
         </tr>
@@ -1654,6 +2208,18 @@
           </th>
         </tr>
         <tr>
+          <th>京成千葉線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E3%81%BF%E3%81%A9%E3%82%8A%E5%8F%B0%E9%A7%85/@35.6247899,140.0955154,17z/data=!3m1!4b1!4m5!3m4!1s0x60228363329b02ab:0x25e7937ae3a01a62!8m2!3d35.6247899!4d140.0977041?hl=ja"
+              >みどり台駅</a
+            >
+          </th>
+          <th>水野翠</th>
+          <th>千葉市稲毛区</th>
+          <th>-</th>
+        </tr>
+        <tr>
           <th>千葉都市モノレール2号線</th>
           <th>
             <a
@@ -1669,6 +2235,18 @@
           <th>小湊鉄道</th>
           <th>
             <a
+              href="https://www.google.co.jp/maps/place/%E4%B8%8A%E7%B7%8F%E6%9D%91%E4%B8%8A%E9%A7%85/@35.4962281,140.0980522,17z/data=!3m1!4b1!4m5!3m4!1s0x60229ed2a5490155:0x8a99a8c3c7918769!8m2!3d35.4962281!4d140.1002409?hl=ja"
+              >上総村上駅</a
+            >
+          </th>
+          <th>村上巴</th>
+          <th>市原市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>小湊鉄道</th>
+          <th>
+            <a
               href="https://www.google.co.jp/maps/place/%E9%87%8C%E8%A6%8B%E9%A7%85/@35.3372603,140.1433369,17z/data=!3m1!4b1!4m5!3m4!1s0x6022a57458929cb7:0x6483ee2a65d9c1ec!8m2!3d35.3372603!4d140.1455256?hl=ja"
               >里見(さとみ)駅</a
             >
@@ -1676,6 +2254,19 @@
           <th>榊原里美</th>
           <th>市原市</th>
           <th>-</th>
+        </tr>
+        <tr>
+          <th>小湊鉄道</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E4%B8%8A%E7%B7%8F%E4%B8%AD%E9%87%8E%E9%A7%85/@35.250077,140.1972803,17z/data=!3m1!4b1!4m5!3m4!1s0x6022b214b8426341:0x464c0f72fd8734b5!8m2!3d35.250077!4d140.199469?hl=ja"
+              >上総中野駅</a
+            >
+          </th>
+          <th>中野有香</th>
+          <th>大多喜町</th>
+          <th><div><a href="画/上総中野1.jpg">古い駅名標と有香ちゃん</a></div>
+            <div><a href="画/上総中野2.jpg">駅名標と有香ちゃん</a></div></th>
         </tr>
         <tr>
           <th>東葉高速鉄道東葉高速線</th>
@@ -1717,8 +2308,8 @@
           <th>古賀小春</th>
           <th>古河市</th>
           <th>
-            <div><a href="画/小春1.png">駅名標と小春ちゃん1</a></div>
-            <div><a href="画/小春2.png">駅名標と小春ちゃん2</a></div>
+            <div><a href="画/小春1.png">駅名標と小春ちゃん</a></div>
+            <div><a href="画/小春2.png">遠い駅名標と小春ちゃん</a></div>
             <div><a href="画/小春3.png">電車と小春ちゃん</a></div>
           </th>
         </tr>
@@ -1728,7 +2319,8 @@
             <a
               href="https://www.google.co.jp/maps/place/%E7%B5%90%E5%9F%8E%E9%A7%85/@36.2982229,139.8701822,17z/data=!3m1!4b1!4m5!3m4!1s0x601f5214feacf519:0xfa9d8af33934f6ab!8m2!3d36.2982229!4d139.8723709?hl=ja"
               >結城駅</a
-            >
+            ><br />
+            <a href="https://www.google.co.jp/maps/place/%E6%9D%B1%E7%B5%90%E5%9F%8E%E9%A7%85/@36.2966177,139.8891247,17z/data=!3m1!4b1!4m5!3m4!1s0x601f524dcdfe3035:0xfd2c1c41fce94de5!8m2!3d36.2966177!4d139.8913134?hl=ja">東結城駅</a>
           </th>
           <th>結城晴,乙倉悠貴</th>
           <th>結城市</th>
@@ -1777,6 +2369,30 @@
           </th>
         </tr>
         <tr>
+          <th>常磐線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E6%9D%B1%E6%B5%B7%E9%A7%85/@36.4655339,140.5638657,17z/data=!3m1!4b1!4m5!3m4!1s0x6022291766677d3b:0xaf158b50226257f4!8m2!3d36.4655339!4d140.5660544?hl=ja"
+              >東海駅</a
+            >
+          </th>
+          <th>杉坂海</th>
+          <th>東海村</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>水郡線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E5%B8%B8%E9%99%B8%E5%A4%AA%E7%94%B0%E9%A7%85/@36.5315277,140.5257175,17z/data=!3m1!4b1!4m5!3m4!1s0x602187cf3dc3d8c1:0x6bfb50bdc2eb62!8m2!3d36.5315277!4d140.5279062?hl=ja"
+              >常陸太田駅</a
+            >
+          </th>
+          <th>太田優</th>
+          <th>常陸太田市</th>
+          <th>-</th>
+        </tr>
+        <tr>
           <th>真岡鉄道</th>
           <th>
             <a
@@ -1812,8 +2428,8 @@
           <th>
             <div><a href="画/氏家1.png">駅前とむつみちゃん1</a></div>
             <div><a href="画/氏家2.png">駅前とむつみちゃん2</a></div>
-            <div><a href="画/氏家3.png">暗闇駅名標とむつみちゃん1</a></div>
-            <div><a href="画/氏家4.png">暗闇駅名標とむつみちゃん2</a></div>
+            <div><a href="画/氏家3.png">暗闇とむつみちゃん1</a></div>
+            <div><a href="画/氏家4.png">暗闇とむつみちゃん2</a></div>
             <div><a href="画/氏家5.png">むつみちゃんのお見送り</a></div>
           </th>
         </tr>
@@ -1865,11 +2481,19 @@
           <th>画像データ</th>
         </tr>
         <tr>
-          <th>両毛線</th>
+          <th>両毛線<br />上毛電鉄上毛線<br />東武桐生線</th>
           <th>
             <a
               href="https://www.google.co.jp/maps/place/%E6%A1%90%E7%94%9F%E9%A7%85/@36.4111451,139.33089,17z/data=!3m1!4b1!4m5!3m4!1s0x601ee24f0f4806eb:0x2465d10a8e35f5cc!8m2!3d36.4111451!4d139.3330787?hl=ja"
               >桐生駅</a
+            ><br />
+            <a
+              href="https://www.google.co.jp/maps/place/%E8%A5%BF%E6%A1%90%E7%94%9F%E9%A7%85/@36.4140069,139.3313449,17z/data=!3m1!4b1!4m5!3m4!1s0x601ee2501e2a809d:0x9856eadc1e672011!8m2!3d36.4140069!4d139.3335336?hl=ja"
+              >西桐生駅</a
+            ><br />
+            <a
+              href="https://www.google.co.jp/maps/place/%E6%96%B0%E6%A1%90%E7%94%9F%E9%A7%85/@36.395106,139.3180792,17z/data=!3m1!4b1!4m5!3m4!1s0x601ee3cbfa03abe7:0xdf784e2030cf6166!8m2!3d36.395106!4d139.3202679?hl=ja"
+              >新桐生駅</a
             >
           </th>
           <th>桐生つかさ</th>
@@ -1897,7 +2521,7 @@
             <div><a href="画/太田2.png">駅名標と優ちゃん1</a></div>
             <div><a href="画/太田3.jpg">駅名標と優ちゃん2</a></div>
             <div><a href="画/太田4.png">駅名標と優ちゃん3</a></div>
-            <div><a href="画/太田5.png">駅名標と優ちゃんドレスアップ</a></div>
+            <div><a href="画/太田5.png">ドレスアップ</a></div>
           </th>
         </tr>
         <tr>
@@ -1910,6 +2534,18 @@
           </th>
           <th>牙崎連</th>
           <th>太田市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>わたらせ渓谷鉄道わたらせ渓谷線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E4%B8%8B%E6%96%B0%E7%94%B0%E9%A7%85/@36.4076172,139.3129472,17z/data=!3m1!4b1!4m5!3m4!1s0x601ee3af8dae62ab:0xb9ade7c317e10e3!8m2!3d36.4076172!4d139.3151359?hl=ja"
+              >下新田駅</a
+            >
+          </th>
+          <th>新田美波</th>
+          <th>桐生市</th>
           <th>-</th>
         </tr>
         <tr>
@@ -1945,14 +2581,26 @@
             <div><a href="画/赤城2.png">駅名標とみりあちゃん</a></div>
             <div><a href="画/赤城3.png">高津戸峡の紅葉</a></div>
             <div><a href="画/赤城4.png">高津戸ダム</a></div>
-            <div><a href="画/赤城5.png">高津戸峡の橋で瞑想する少女</a></div>
+            <div><a href="画/赤城5.png">橋で瞑想する少女</a></div>
           </th>
+        </tr>
+        <tr>
+          <th>上毛電鉄上毛線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E4%B8%8A%E6%B3%89%E9%A7%85/@36.3941687,139.1045768,17z/data=!3m1!4b1!4m5!3m4!1s0x601ef23734379f75:0xbf7d108369b489a9!8m2!3d36.3941687!4d139.1067655?hl=ja"
+              >上泉駅</a
+            >
+          </th>
+          <th>大石泉</th>
+          <th>前橋市</th>
+          <th>-</th>
         </tr>
       </table>
     </section>
     <a href="index.html#top">メニュートップに戻る</a>
     <section>
-      <h2 id="Tube">中部</h2>
+      <h2>中部</h2>
       <h3 align="center" id="Yamanasi">山梨県</h3>
       <table border="1">
         <tr>
@@ -1978,6 +2626,18 @@
             <div><a href="画/大月3.png">紅葉の知らせ</a></div>
             <div><a href="画/大月4.png">富士山だよー!!</a></div>
           </th>
+        </tr>
+        <tr>
+          <th>中央線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E7%94%B2%E6%96%90%E5%A4%A7%E5%92%8C%E9%A7%85/@35.6396901,138.7791906,17z/data=!3m1!4b1!4m5!3m4!1s0x601959e86ad00555:0x4df25724c089ca4f!8m2!3d35.6396901!4d138.7813793?hl=ja"
+              >甲斐大和駅</a
+            >
+          </th>
+          <th>大和亜季</th>
+          <th>甲州市</th>
+          <th>-</th>
         </tr>
         <tr>
           <th>身延線</th>
@@ -2043,11 +2703,47 @@
           </th>
         </tr>
         <tr>
-          <th>篠ノ井線</th>
+          <th>飯山線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E4%BF%A1%E6%BF%83%E6%B5%85%E9%87%8E%E9%A7%85/@36.7217485,138.2922449,17z/data=!3m1!4b1!4m5!3m4!1s0x601d89bea62557e5:0x384a5bae5e232f1f!8m2!3d36.7217485!4d138.2944336?hl=ja"
+              >信濃浅野駅</a
+            >
+          </th>
+          <th>浅野風香</th>
+          <th>長野市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>飯山線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E4%B8%8A%E4%BB%8A%E4%BA%95%E9%A7%85/@36.7537455,138.3172137,17z/data=!3m1!4b1!4m5!3m4!1s0x601d8a0022115f17:0x5571c5efaad3ed7c!8m2!3d36.7537455!4d138.3194024?hl=ja"
+              >上今井駅</a
+            >
+          </th>
+          <th>今井加奈</th>
+          <th>中野市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>篠ノ井線<br />篠ノ井線<br />大糸線<br />アルピコ交通上高地線</th>
           <th>
             <a
               href="https://www.google.co.jp/maps/place/%E6%9D%BE%E6%9C%AC%E9%A7%85/@36.2308151,137.9621665,17z/data=!3m1!4b1!4m5!3m4!1s0x601d0e8bd528dceb:0xda2afc863df2bd0f!8m2!3d36.2308151!4d137.9643552?hl=ja"
               >松本駅</a
+            ><br />
+            <a
+              href="https://www.google.co.jp/maps/place/%E5%8D%97%E6%9D%BE%E6%9C%AC%E9%A7%85/@36.2101319,137.9670716,17z/data=!3m1!4b1!4m5!3m4!1s0x601d0f0289a4dbcd:0x8d9caa94c30ba8b1!8m2!3d36.2101319!4d137.9692603?hl=ja"
+              >南松本駅</a
+            ><br />
+            <a
+              href="https://www.google.co.jp/maps/place/%E5%8C%97%E6%9D%BE%E6%9C%AC%E9%A7%85/@36.2371018,137.9587592,17z/data=!3m1!4b1!4m5!3m4!1s0x601d0e7d8d1bf1c5:0x487e9adda7448b99!8m2!3d36.2371018!4d137.9609479?hl=ja"
+              >北松本駅</a
+            ><br />
+            <a
+              href="https://www.google.co.jp/maps/place/%E8%A5%BF%E6%9D%BE%E6%9C%AC%E9%A7%85/@36.2271576,137.9612204,17z/data=!3m1!4b1!4m5!3m4!1s0x601d0e8adda614db:0xcf59224e1cc5a2d1!8m2!3d36.2271576!4d137.9634091?hl=ja"
+              >西松本駅</a
             >
           </th>
           <th>松本沙理奈</th>
@@ -2057,6 +2753,18 @@
             <div><a href="画/松本2.png">駅前と沙理奈さん</a></div>
             <div><a href="画/松本3.png">駅名標と沙理奈さん</a></div>
           </th>
+        </tr>
+        <tr>
+          <th>篠ノ井線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E8%81%96%E9%AB%98%E5%8E%9F%E9%A7%85/@36.4551434,138.0451937,17z/data=!3m1!4b1!4m5!3m4!1s0x601d7653d7b1e19f:0xb2b5d20fa0419685!8m2!3d36.4551434!4d138.0473824?hl=ja"
+              >聖高原駅</a
+            >
+          </th>
+          <th>望月聖</th>
+          <th>麻績村</th>
+          <th>-</th>
         </tr>
         <tr>
           <th>飯田線</th>
@@ -2069,7 +2777,7 @@
           <th>白雪千夜</th>
           <th>飯田市</th>
           <th>
-            <div><a href="画/ちよ1.png">駅名標と千夜ちゃんbyしらたかP</a></div>
+            <div><a href="画/ちよ1.png">山間部ですbyしらたかP</a></div>
           </th>
         </tr>
         <tr>
@@ -2083,7 +2791,7 @@
           <th>片桐早苗</th>
           <th>松川町</th>
           <th>
-            <div><a href="画/早苗1.png">駅名標と早苗さんbyしらたかP</a></div>
+            <div><a href="画/早苗1.png">カミ片桐byしらたかP</a></div>
           </th>
         </tr>
         <tr>
@@ -2098,7 +2806,7 @@
           <th>伊那市</th>
           <th>
             <div>
-              <a href="画/みりあ1.png">駅名標とみりあちゃんbyしらたかP</a>
+              <a href="画/みりあ1.png">ツリーbyしらたかP</a>
             </div>
           </th>
         </tr>
@@ -2115,6 +2823,18 @@
           <th>-</th>
         </tr>
         <tr>
+          <th>中央線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E6%9C%A8%E3%83%8E%E4%B8%8B%E9%A7%85/@35.9008344,137.9857765,17z/data=!3m1!4b1!4m5!3m4!1s0x601cfa0ec2c14acd:0xb48332e6d4582b56!8m2!3d35.9008344!4d137.9879652?hl=ja"
+              >信濃川島駅</a
+            >
+          </th>
+          <th>川島瑞樹</th>
+          <th>辰野町</th>
+          <th>-</th>
+        </tr>
+        <tr>
           <th>しなの鉄道しなの鉄道線</th>
           <th>
             <a
@@ -2124,6 +2844,18 @@
           </th>
           <th>田中琴葉,田中摩美々</th>
           <th>東御市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>しなの鉄道しなの鉄道線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E8%81%96%E9%AB%98%E5%8E%9F%E9%A7%85/@36.4551434,138.0451937,17z/data=!3m1!4b1!4m5!3m4!1s0x601d7653d7b1e19f:0xb2b5d20fa0419685!8m2!3d36.4551434!4d138.0473824?hl=ja"
+              >西上田駅</a
+            >
+          </th>
+          <th>上田鈴帆</th>
+          <th>上田市</th>
           <th>-</th>
         </tr>
         <tr>
@@ -2171,6 +2903,18 @@
           <th>長野電鉄長野線</th>
           <th>
             <a
+              href="https://www.google.co.jp/maps/place/%E4%BF%A1%E5%B7%9E%E4%B8%AD%E9%87%8E%E9%A7%85/@36.7447717,138.3627132,17z/data=!3m1!4b1!4m5!3m4!1s0x601d8afbc8bc1b47:0x1a315a58fc50ae6b!8m2!3d36.7447717!4d138.3649019?hl=ja"
+              >信州中野駅</a
+            >
+          </th>
+          <th>中野有香</th>
+          <th>中野市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>長野電鉄長野線</th>
+          <th>
+            <a
               href="https://www.google.co.jp/maps/place/%E4%B8%8A%E6%9D%A1%E9%A7%85/@36.7496094,138.405345,17z/data=!3m1!4b1!4m5!3m4!1s0x601df4d05e020ba3:0x1f3fe0cef8e03549!8m2!3d36.7496094!4d138.4075337?hl=ja"
               >上条駅</a
             >
@@ -2178,7 +2922,7 @@
           <th>上条春菜</th>
           <th>山ノ内町</th>
           <th>
-            <div><a href="画/上条1.png">駅名標と春菜ちゃんbyしらたかP</a></div>
+            <div><a href="画/上条1.png">春菜上陸!byしらたかP</a></div>
           </th>
         </tr>
         <tr>
@@ -2209,6 +2953,18 @@
             <div><a href="画/上田3.png">上田電鉄の入り口</a></div>
             <div><a href="画/上田4.png">駅名標と鈴帆しゃん</a></div>
           </th>
+        </tr>
+        <tr>
+          <th>上田電鉄別所線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E4%B8%89%E5%A5%BD%E7%94%BA%E9%A7%85/@36.3917292,138.2330135,17z/data=!3m1!4b1!4m5!3m4!1s0x601da32c0a321bad:0xd7619fc170ce0a26!8m2!3d36.3917292!4d138.2352022?hl=ja"
+              >三好町駅</a
+            >
+          </th>
+          <th>三好紗南</th>
+          <th>上田市</th>
+          <th>-</th>
         </tr>
         <tr>
           <th>上田電鉄別所線</th>
@@ -2251,6 +3007,18 @@
           <th>画像データ</th>
         </tr>
         <tr>
+          <th>飯山線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E6%9C%88%E5%B2%A1%E9%A7%85/@37.8893904,139.2702485,17z/data=!3m1!4b1!4m5!3m4!1s0x5f8b32adaa7e2e1f:0x571d1db7e112aeae!8m2!3d37.8893904!4d139.2724372?hl=ja"
+              >越後田中駅</a
+            >
+          </th>
+          <th>田中琴葉,田中摩美々</th>
+          <th>新発田市</th>
+          <th>-</th>
+        </tr>
+        <tr>
           <th>信越本線</th>
           <th>
             <a
@@ -2283,12 +3051,12 @@
             <div><a href="画/前川3.png">駅前とみくにゃん(魅惑編)</a></div>
             <div>
               <a href="画/前川7.jpeg"
-                >駅前とみくにゃん(トレーニング編)byK153P</a
+                >トレーニングbyK153P</a
               >
             </div>
             <div>
               <a href="画/前川9.jpeg"
-                >みくにゃんは仲間になりたいのニャーbyK153P</a
+                >仲間ニャーbyK153P</a
               >
             </div>
           </th>
@@ -2320,6 +3088,18 @@
             <div><a href="画/村上7.png">駅前とお嬢じゃ</a></div>
             <div><a href="画/村上8.png">歓迎じゃ</a></div>
           </th>
+        </tr>
+        <tr>
+          <th>磐越西線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E6%96%B0%E9%96%A2%E9%A7%85/@37.7684569,139.1601246,17z/data=!3m1!4b1!4m5!3m4!1s0x5ff4da18c39b654d:0xa22819571664f049!8m2!3d37.7684569!4d139.1623133?hl=ja"
+              >新関駅</a
+            >
+          </th>
+          <th>関裕美</th>
+          <th>新潟市秋葉区</th>
+          <th>-</th>
         </tr>
         <tr>
           <th>白新線</th>
@@ -2380,6 +3160,42 @@
           <th>画像データ</th>
         </tr>
         <tr>
+          <th>富山地方鉄道本線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E8%B6%8A%E4%B8%AD%E6%B3%89%E9%A7%85/@36.6998168,137.3246992,17z/data=!3m1!4b1!4m5!3m4!1s0x5ff7968cc05179ff:0xec53bdddacd36c41!8m2!3d36.6998168!4d137.3268879?hl=ja"
+              >越中泉駅</a
+            >
+          </th>
+          <th>大石泉</th>
+          <th>立山町</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>富山地方鉄道市内線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E8%A5%BF%E4%B8%AD%E9%87%8E%E9%A7%85/@36.6804752,137.2145912,17z/data=!3m1!4b1!4m5!3m4!1s0x5ff7905a5ed5b179:0xb689cc054cc57587!8m2!3d36.6804752!4d137.2167799?hl=ja"
+              >西中野駅</a
+            >
+          </th>
+          <th>月岡恋鐘</th>
+          <th>富山市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>富山地方鉄道上滝線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E4%B8%8A%E5%A0%80%E9%A7%85/@36.6537199,137.2275788,17z/data=!3m1!4b1!4m5!3m4!1s0x5ff791e8c8df9e7d:0x420c246d814c13e0!8m2!3d36.6537199!4d137.2297676?hl=ja"
+              >上堀駅</a
+            >
+          </th>
+          <th>堀裕子</th>
+          <th>富山市</th>
+          <th>-</th>
+        </tr>
+        <tr>
           <th>富山地方鉄道上滝線</th>
           <th>
             <a
@@ -2418,6 +3234,18 @@
           <th>七尾線</th>
           <th>
             <a
+              href="https://www.google.co.jp/maps/place/%E8%83%BD%E7%99%BB%E4%BA%8C%E5%AE%AE%E9%A7%85/@36.9846863,136.9149352,17z/data=!3m1!4b1!4m5!3m4!1s0x5ff7150e1a196445:0x488add8f3ee6d012!8m2!3d36.9846863!4d136.9171239?hl=ja"
+              >能登二宮駅</a
+            >
+          </th>
+          <th>二宮飛鳥</th>
+          <th>中能登町</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>七尾線</th>
+          <th>
+            <a
               href="https://www.google.co.jp/maps/place/%E6%A8%AA%E5%B1%B1%E9%A7%85/@36.747611,136.7147474,17z/data=!3m1!4b1!4m5!3m4!1s0x5ff9d7db06ae9dad:0xee4cd6d056a35878!8m2!3d36.747611!4d136.7169361?hl=ja"
               >横山駅</a
             >
@@ -2449,6 +3277,18 @@
             <div><a href="画/小松4.jpg">巨大ダンプカー</a></div>
           </th>
         </tr>
+        <tr>
+          <th>北陸鉄道石川線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E8%A5%BF%E6%B3%89%E9%A7%85/@36.5534098,136.6314786,17z/data=!3m1!4b1!4m5!3m4!1s0x5ff8346002aa083d:0x17e2f438e31a3aca!8m2!3d36.5534098!4d136.6336674?hl=ja"
+              >西泉駅</a
+            >
+          </th>
+          <th>大石泉</th>
+          <th>金沢市</th>
+          <th>-</th>
+        </tr>
       </table>
 
       <h3 align="center" id="Hukui">福井県</h3>
@@ -2459,6 +3299,26 @@
           <th>対応アイドル</th>
           <th>所在地</th>
           <th>画像データ</th>
+        </tr>
+        <tr>
+          <th>越美北線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E8%B6%8A%E5%89%8D%E6%9D%B1%E9%83%B7%E9%A7%85/@36.018114,136.2718307,17z/data=!3m1!4b1!4m5!3m4!1s0x5ff8bc99806c178f:0xb6eecd2d4ec7a27c!8m2!3d36.018114!4d136.2740194?hl=ja"
+              >越前東郷駅</a
+            >
+          </th>
+          <th>東郷あい</th>
+          <th>福井市</th>
+          <th>
+            <div><a href="画/あい1.jpg">カッコいいbyロゼミルP</a></div>
+            <div>
+              <a href="画/あい2.jpg">待ち合わせbyロゼミルP</a>
+            </div>
+            <div>
+              <a href="画/あい3.jpg">おつくねのまちbyロゼミルP</a>
+            </div>
+          </th>
         </tr>
         <tr>
           <th>北陸本線</th>
@@ -2645,6 +3505,18 @@
           <th>-</th>
         </tr>
         <tr>
+          <th>大井川鉄道大井川本線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E4%B8%8B%E6%B3%89%E9%A7%85/@35.0222142,138.0878568,17z/data=!3m1!4b1!4m5!3m4!1s0x601ba9dad38f14b3:0xdb1b7b2a9d9d6f19!8m2!3d35.0222142!4d138.0900455?hl=ja"
+              >下泉駅</a
+            >
+          </th>
+          <th>大石泉</th>
+          <th>川根本町</th>
+          <th>-</th>
+        </tr>
+        <tr>
           <th>遠鉄電車</th>
           <th>
             <a
@@ -2674,6 +3546,30 @@
             <div><a href="画/城ケ崎5.png">怪しい博物館</a></div>
           </th>
         </tr>
+        <tr>
+          <th>伊豆急行線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E4%BC%8A%E8%B1%86%E5%8C%97%E5%B7%9D%E9%A7%85/@34.8270112,139.073558,17z/data=!3m1!4b1!4m5!3m4!1s0x6019ddd1eb7f9fc7:0xb5151eb069911be3!8m2!3d34.8270112!4d139.0757467?hl=ja"
+              >伊豆北川駅</a
+            >
+          </th>
+          <th>北川真尋</th>
+          <th>東伊豆町</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>静岡鉄道静岡清水線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E6%98%A5%E6%97%A5%E7%94%BA%E9%A7%85/@34.9785047,138.3984985,17z/data=!3m1!4b1!4m5!3m4!1s0x601a3601aee1f839:0xbb9ecad47e59eeae!8m2!3d34.9785047!4d138.4006872?hl=ja"
+              >春日町駅</a
+            >
+          </th>
+          <th>春日未来</th>
+          <th>静岡市葵区</th>
+          <th>-</th>
+        </tr>
       </table>
 
       <h3 align="center" id="Aichi">愛知県</h3>
@@ -2686,21 +3582,35 @@
           <th>画像データ</th>
         </tr>
         <tr>
-          <th>東海道線</th>
+          <th>
+            東海道線<br />愛知環状鉄道線<br />愛知環状鉄道線<br />東海道線<br />名鉄名古屋本線
+          </th>
           <th>
             <a
               href="https://www.google.co.jp/maps/place/%E5%B2%A1%E5%B4%8E%E9%A7%85/@34.9254803,137.1551389,17z/data=!3m1!4b1!4m5!3m4!1s0x6004bd0ae240c36f:0x9354da5e9a183ac5!8m2!3d34.9254803!4d137.1573276?hl=ja"
               >岡崎駅</a
+            ><br /><a
+              href="https://www.google.co.jp/maps/place/%E5%8C%97%E5%B2%A1%E5%B4%8E%E9%A7%85/@34.9725299,137.1555499,17z/data=!3m1!4b1!4m5!3m4!1s0x6004a2c7245d4f8f:0x86d6fc953165b8ca!8m2!3d34.9725299!4d137.1577386?hl=ja"
+              >北岡崎駅</a
+            ><br /><a
+              href="https://www.google.co.jp/maps/place/%E4%B8%AD%E5%B2%A1%E5%B4%8E%E9%A7%85/@34.9562816,137.1505232,17z/data=!3m1!4b1!4m5!3m4!1s0x6004bd4b1a065d91:0x83d827cf9c0e60d2!8m2!3d34.9562816!4d137.1527119?hl=ja"
+              >中岡崎駅</a
+            ><br /><a
+              href="https://www.google.co.jp/maps/place/%E8%A5%BF%E5%B2%A1%E5%B4%8E%E9%A7%85/@34.9465875,137.1206928,17z/data=!3m1!4b1!4m5!3m4!1s0x6004981c34c95853:0x81bcbbab0fcde7bc!8m2!3d34.9465875!4d137.1228815?hl=ja"
+              >西岡崎駅</a
+            ><br /><a
+              href="https://www.google.co.jp/maps/place/%E6%9D%B1%E5%B2%A1%E5%B4%8E%E9%A7%85/@34.9519005,137.1653011,17z/data=!3m1!4b1!4m5!3m4!1s0x6004bd24e164b0d1:0x8102d4668b02bc84!8m2!3d34.9519005!4d137.1674898?hl=ja"
+              >東岡崎駅</a
             >
           </th>
           <th>岡崎泰葉</th>
           <th>岡崎市</th>
           <th>
-            <div><a href="画/岡崎1.jpg">駅前と泰葉ちゃん</a></div>
-            <div><a href="画/岡崎2.png">駅名標と泰葉ちゃん</a></div>
-            <div><a href="画/岡崎3.png">駅名標と泰葉ちゃん2byしらたかP</a></div>
-            <div><a href="画/岡崎4.png">駅名標と泰葉ちゃん3byしらたかP</a></div>
-            <div><a href="画/岡崎5.png">駅名標と泰葉ちゃん4byしらたかP</a></div>
+            <div><a href="画/岡崎1.jpg">ここが…</a></div>
+            <div><a href="画/岡崎2.png">岡崎駅です!</a></div>
+            <div><a href="画/岡崎3.png">W主張byしらたかP</a></div>
+            <div><a href="画/岡崎4.png">テレ泰葉1byしらたかP</a></div>
+            <div><a href="画/岡崎5.png">テレ泰葉2byしらたかP</a></div>
           </th>
         </tr>
         <tr>
@@ -2728,6 +3638,30 @@
           <th>-</th>
         </tr>
         <tr>
+          <th>飯田線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E4%B8%89%E6%B2%B3%E6%9D%B1%E9%83%B7%E9%A7%85/@34.9120778,137.5248644,17z/data=!3m1!4b1!4m5!3m4!1s0x601b341d5a782065:0x532da0ac1cfe70a8!8m2!3d34.9120778!4d137.5270531?hl=ja"
+              >三河東郷駅</a
+            >
+          </th>
+          <th>東郷あい</th>
+          <th>新城市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>飯田線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E4%B8%89%E6%B2%B3%E6%A7%99%E5%8E%9F%E9%A7%85/@34.9887617,137.6186483,17z/data=!3m1!4b1!4m5!3m4!1s0x601b3839f84ed59b:0x12a63f61c02197de!8m2!3d34.9887617!4d137.620837?hl=ja"
+              >三河槙原駅</a
+            >
+          </th>
+          <th>槙原志保</th>
+          <th>新城市</th>
+          <th>-</th>
+        </tr>
+        <tr>
           <th>名鉄名古屋本線</th>
           <th>
             <a
@@ -2739,13 +3673,13 @@
           <th>名古屋市南区</th>
           <th>
             <div>
-              <a href="画/さくら6.png">駅名標とさくらちゃん1byしらたかP</a>
+              <a href="画/さくら6.png">さくらです!1byしらたかP</a>
             </div>
             <div>
-              <a href="画/さくら7.png">駅前とさくらちゃんbyしらたかP</a>
+              <a href="画/さくら7.png">さくらです!2byしらたかP</a>
             </div>
             <div>
-              <a href="画/さくら8.png">駅名標とさくらちゃん2byしらたかP</a>
+              <a href="画/さくら8.png">さくらです!3byしらたかP</a>
             </div>
           </th>
         </tr>
@@ -2760,8 +3694,8 @@
           <th>櫻井桃華</th>
           <th>安城市</th>
           <th>
-            <div><a href="画/桜井6.png">駅名標と桃華ちゃん1byしらたかP</a></div>
-            <div><a href="画/桜井7.png">駅名標と桃華ちゃん2byしらたかP</a></div>
+            <div><a href="画/桜井6.png">桃華ちゃん1byしらたかP</a></div>
+            <div><a href="画/桜井7.png">桃華ちゃん2byしらたかP</a></div>
           </th>
         </tr>
         <tr>
@@ -2775,10 +3709,22 @@
           <th>若林智香</th>
           <th>豊田市</th>
           <th>
-            <div><a href="画/若林5.png">駅名標と智香ちゃん1byしらたかP</a></div>
-            <div><a href="画/若林6.png">駅名標と智香ちゃん2byしらたかP</a></div>
-            <div><a href="画/若林7.png">駅前と智香ちゃんbyしらたかP</a></div>
+            <div><a href="画/若林5.png">智香上陸!byしらたかP</a></div>
+            <div><a href="画/若林6.png">エールしてbyしらたかP</a></div>
+            <div><a href="画/若林7.png">お見送り!byしらたかP</a></div>
           </th>
+        </tr>
+        <tr>
+          <th>名鉄河和線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E5%A4%AA%E7%94%B0%E5%B7%9D%E9%A7%85/@35.0206013,136.8905156,17z/data=!3m1!4b1!4m5!3m4!1s0x60037e633f574eb7:0x6dbb8cdf8afa5c87!8m2!3d35.0206013!4d136.8927043?hl=ja"
+              >太田川駅</a
+            >
+          </th>
+          <th>太田優</th>
+          <th>東海市</th>
+          <th>-</th>
         </tr>
         <tr>
           <th>名鉄常滑線</th>
@@ -2793,18 +3739,22 @@
           <th>-</th>
         </tr>
         <tr>
-          <th>名鉄瀬戸線</th>
+          <th>名鉄瀬戸線<br />愛知環状鉄道線</th>
           <th>
             <a
               href="https://www.google.co.jp/maps/place/%E6%B0%B4%E9%87%8E%E9%A7%85/@35.2242214,137.0671873,17z/data=!3m1!4b1!4m5!3m4!1s0x600368b9a327ff7f:0x7a1708cd40a3f921!8m2!3d35.2242214!4d137.069376?hl=ja"
               >水野駅</a
+            ><br />
+            <a
+              href="https://www.google.co.jp/maps/place/%E4%B8%AD%E6%B0%B4%E9%87%8E%E9%A7%85/@35.2503019,137.0697972,17z/data=!3m1!4b1!4m5!3m4!1s0x60036926bb38bfa7:0xde3ad18108c20c3b!8m2!3d35.2503019!4d137.0719859?hl=ja"
+              >中水野駅</a
             >
           </th>
           <th>水野翠</th>
           <th>瀬戸市</th>
           <th>
-            <div><a href="画/水野1.png">駅名標と翠ちゃん1byしらたかP</a></div>
-            <div><a href="画/水野2.png">駅名標と翠ちゃん2byしらたかP</a></div>
+            <div><a href="画/水野1.png">ここが水野byしらたかP</a></div>
+            <div><a href="画/水野2.png">駅なんですね!byしらたかP</a></div>
           </th>
         </tr>
         <tr>
@@ -2818,7 +3768,7 @@
           <th>萩原雪歩</th>
           <th>一宮市</th>
           <th>
-            <div><a href="画/萩原1.jpeg">駅名標と雪歩ちゃんbyしらたかP</a></div>
+            <div><a href="画/萩原1.jpeg">萩原ですぅbyしらたかP</a></div>
           </th>
         </tr>
         <tr>
@@ -2856,9 +3806,9 @@
           <th>黒川千秋</th>
           <th>名古屋市北区</th>
           <th>
-            <div><a href="画/黒川6.png">駅前からこんにちはbyしらたかP</a></div>
-            <div><a href="画/黒川7.png">駅名標と千秋さん1byしらたかP</a></div>
-            <div><a href="画/黒川8.png">駅名標と千秋さん2byしらたかP</a></div>
+            <div><a href="画/黒川6.png">駅前からbyしらたかP</a></div>
+            <div><a href="画/黒川7.png">どうもbyしらたかP</a></div>
+            <div><a href="画/黒川8.png">次の場所へbyしらたかP</a></div>
           </th>
         </tr>
         <tr>
@@ -2872,8 +3822,8 @@
           <th>篠原礼</th>
           <th>豊田市</th>
           <th>
-            <div><a href="画/篠原6.jpeg">駅名標と礼さん1byしらたかP</a></div>
-            <div><a href="画/篠原7.png">駅名標と礼さん2byしらたかP</a></div>
+            <div><a href="画/篠原6.jpeg">読みは…byしらたかP</a></div>
+            <div><a href="画/篠原7.png">岡崎46分byしらたかP</a></div>
           </th>
         </tr>
         <tr>
@@ -2924,6 +3874,18 @@
           <th>-</th>
         </tr>
         <tr>
+          <th>高山本線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E9%A3%9B%E9%A8%A8%E8%90%A9%E5%8E%9F%E9%A7%85/@35.8747319,137.2114388,17z/data=!3m1!4b1!4m5!3m4!1s0x6002c37d6f46e90f:0x6921c80c28a37df1!8m2!3d35.8747319!4d137.2136275?hl=ja"
+              >飛騨萩原駅</a
+            >
+          </th>
+          <th>萩原雪歩</th>
+          <th>下呂市</th>
+          <th>-</th>
+        </tr>
+        <tr>
           <th>樽見鉄道樽見線</th>
           <th>
             <a
@@ -2953,15 +3915,31 @@
             <a
               href="https://www.google.co.jp/maps/place/%E9%96%A2%E9%A7%85/@35.4900207,136.9107745,17z/data=!3m1!4b1!4m5!3m4!1s0x6003041006aaa739:0x84d45727c5043bec!8m2!3d35.4900207!4d136.9129632?hl=ja"
               >関駅</a
+            ><br />
+            <a
+              href="https://www.google.co.jp/maps/place/%E9%96%A2%E5%8F%A3%E9%A7%85/@35.4800358,136.9266664,17z/data=!3m1!4b1!4m5!3m4!1s0x600304458fde6099:0x95c1ba0d44c54ba4!8m2!3d35.4800358!4d136.9288551?hl=ja"
+              >関口駅</a
             >
           </th>
           <th>関裕美</th>
           <th>関市</th>
           <th>
-            <div><a href="画/関5.png">駅名標と裕美ちゃん1byしらたかP</a></div>
-            <div><a href="画/関6.png">駅名標と裕美ちゃん2byしらたかP</a></div>
-            <div><a href="画/関4.png">せきひろみインターbyしらたかP</a></div>
+            <div><a href="画/関5.png">岐阜の…byしらたかP</a></div>
+            <div><a href="画/関6.png">関だよ。byしらたかP</a></div>
+            <div><a href="画/関4.png">せきひろみbyしらたかP</a></div>
           </th>
+        </tr>
+        <tr>
+          <th>長良川鉄道越美南線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E7%BE%8E%E6%BF%83%E5%A4%AA%E7%94%B0%E9%A7%85/@35.4455881,137.0172272,17z/data=!3m1!4b1!4m5!3m4!1s0x600310f87f814051:0x614918f97ac1971e!8m2!3d35.4455881!4d137.0194159?hl=ja"
+              >美濃太田駅</a
+            >
+          </th>
+          <th>太田優</th>
+          <th>美濃加茂市</th>
+          <th>-</th>
         </tr>
         <tr>
           <th>養老鉄道養老線</th>
@@ -2973,6 +3951,18 @@
           </th>
           <th>村上巴</th>
           <th>大垣市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>養老鉄道養老線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E7%BE%8E%E6%BF%83%E6%9D%BE%E5%B1%B1%E9%A7%85/@35.1609401,136.6304498,17z/data=!3m1!4b1!4m5!3m4!1s0x6003bd7fe57f023f:0xe99c0f9b2efb0afe!8m2!3d35.1609401!4d136.6326385?hl=ja"
+              >美濃松山駅</a
+            >
+          </th>
+          <th>松山久美子</th>
+          <th>海津市</th>
           <th>-</th>
         </tr>
       </table>
@@ -2996,9 +3986,7 @@
           </th>
           <th>兜大吾</th>
           <th>亀山市</th>
-          <th>
-            -
-          </th>
+          <th>-</th>
         </tr>
         <tr>
           <th>関西本線</th>
@@ -3041,6 +4029,18 @@
           <th>-</th>
         </tr>
         <tr>
+          <th>三岐鉄道北勢線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E6%98%9F%E5%B7%9D%E9%A7%85/@35.0643915,136.6279318,17z/data=!3m1!4b1!4m5!3m4!1s0x6003911dd0007043:0xcf0ae7fd60817ad5!8m2!3d35.0643915!4d136.6301205?hl=ja"
+              >星川駅</a
+            >
+          </th>
+          <th>星輝子</th>
+          <th>桑名市</th>
+          <th>-</th>
+        </tr>
+        <tr>
           <th>三岐鉄道三岐線</th>
           <th>
             <a
@@ -3053,6 +4053,46 @@
           <th>-</th>
         </tr>
         <tr>
+          <th>三岐鉄道三岐線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E6%9D%B1%E8%97%A4%E5%8E%9F%E9%A7%85/@35.1476705,136.4967047,17z/data=!3m1!4b1!4m5!3m4!1s0x6003c09302e710b7:0x2dcf7f16b59e1dcc!8m2!3d35.1476705!4d136.4988934?hl=ja"
+              >東藤原駅</a
+            ><br />
+            <a
+              href="https://www.google.co.jp/maps/place/%E8%A5%BF%E8%97%A4%E5%8E%9F%E9%A7%85/@35.1703311,136.475984,17z/data=!3m1!4b1!4m5!3m4!1s0x6003c72823f0a685:0x8c8dcee81db7ea28!8m2!3d35.1703311!4d136.4781727?hl=ja"
+              >西藤原駅</a
+            >
+          </th>
+          <th>藤原肇</th>
+          <th>いなべ市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>近鉄湯の山線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E4%BC%8A%E5%8B%A2%E6%9D%BE%E6%9C%AC%E9%A7%85/@34.9696553,136.588627,17z/data=!3m1!4b1!4m5!3m4!1s0x60038dd70ebcb9cf:0x7beab9632c80c904!8m2!3d34.9696553!4d136.5908157?hl=ja"
+              >伊勢松本駅</a
+            >
+          </th>
+          <th>松本沙理奈</th>
+          <th>四日市市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>近鉄湯の山線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E4%BC%8A%E5%8B%A2%E5%B7%9D%E5%B3%B6%E9%A7%85/@34.9776538,136.5647121,17z/data=!3m1!4b1!4m5!3m4!1s0x60038d9033d3eb61:0x6a61f461a69abf7!8m2!3d34.9776538!4d136.5669008?hl=ja"
+              >伊勢川島駅</a
+            >
+          </th>
+          <th>川島瑞樹</th>
+          <th>四日市市</th>
+          <th>-</th>
+        </tr>
+        <tr>
           <th>近鉄湯の山線</th>
           <th>
             <a
@@ -3061,6 +4101,18 @@
             >
           </th>
           <th>村松さくら</th>
+          <th>四日市市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>四日市あすなろう鉄道八王子線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E8%A5%BF%E6%97%A5%E9%87%8E%E9%A7%85/@34.9528404,136.5887367,17z/data=!3m1!4b1!4m5!3m4!1s0x60038c262d4f993f:0x1d2c7b6cd76905bd!8m2!3d34.9528404!4d136.5909254?hl=ja"
+              >西日野駅</a
+            >
+          </th>
+          <th>日野茜</th>
           <th>四日市市</th>
           <th>-</th>
         </tr>
@@ -3088,11 +4140,23 @@
           <th>鳥羽市</th>
           <th>-</th>
         </tr>
+        <tr>
+          <th>近鉄志摩線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E5%BF%97%E6%91%A9%E6%A8%AA%E5%B1%B1%E9%A7%85/@34.3342046,136.8159075,17z/data=!3m1!4b1!4m5!3m4!1s0x6005aa7af811fb49:0x2bcb1c0b86f05e16!8m2!3d34.3342046!4d136.8180962?hl=ja"
+              >志摩横山駅</a
+            >
+          </th>
+          <th>横山千佳,横山奈緒</th>
+          <th>志摩市</th>
+          <th>-</th>
+        </tr>
       </table>
     </section>
     <a href="index.html#top">メニュートップに戻る</a>
     <section>
-      <h2 id="Kansai">関西</h2>
+      <h2>関西</h2>
       <h3 align="center" id="Osaka">大阪府</h3>
       <table border="1">
         <tr>
@@ -3103,11 +4167,14 @@
           <th>画像データ</th>
         </tr>
         <tr>
-          <th>東海道線</th>
+          <th>東海道線<br />阪急京都本線</th>
           <th>
             <a
               href="https://www.google.co.jp/maps/place/%E9%AB%98%E6%A7%BB%E9%A7%85/@34.8516746,135.6155499,17z/data=!3m1!4b1!4m5!3m4!1s0x600102b7a565b8d1:0xed8e025b05763c0e!8m2!3d34.8516702!4d135.6177386?hl=ja"
               >高槻駅</a
+            ><br /><a
+              href="https://www.google.co.jp/maps/place/%E9%AB%98%E6%A7%BB%E5%B8%82%E9%A7%85/@34.8498121,135.6209634,17z/data=!3m1!4b1!4m5!3m4!1s0x600102cbbded7a3d:0xe53240fdec0e049e!8m2!3d34.8498121!4d135.6231521?hl=ja"
+              >高槻市駅</a
             >
           </th>
           <th>高槻やよい</th>
@@ -3145,8 +4212,23 @@
             <div><a href="画/志希3.jpg">駅名標としきにゃん</a></div>
             <div><a href="画/志希4.jpg">あっ!宮本だ!!!</a></div>
             <div><a href="画/志希5.jpg">駅前としきにゃん</a></div>
-            <div><a href="画/志希6.jpg">その昔、七重塔があったらしい</a></div>
+            <div><a href="画/志希6.jpg">昔、七重塔があったらしい</a></div>
             <div><a href="画/志希7.jpg">高槻まで31km!!!</a></div>
+          </th>
+        </tr>
+        <tr>
+          <th>近鉄南大阪線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E6%B2%B3%E5%86%85%E6%9D%BE%E5%8E%9F%E9%A7%85/@34.5755334,135.554948,17z/data=!3m1!4b1!4m5!3m4!1s0x6000d904b8c602cb:0xf91a5f51d83b887c!8m2!3d34.5755334!4d135.5571367?hl=ja"
+              >河内松原駅</a
+            >
+          </th>
+          <th>松原早耶</th>
+          <th>松原市</th>
+          <th><div><a href="画/松原5.jpg">出現早耶ちゃんbyHALLEP</a></div>
+            <div><a href="画/松原6.jpg">阿部野or長野!?byHALLEP</a></div>
+            <div><a href="画/松原7.jpg">ホームでポーズbyHALLEP</a></div>
           </th>
         </tr>
         <tr>
@@ -3159,6 +4241,18 @@
           </th>
           <th>道明寺歌鈴</th>
           <th>藤井寺市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>近鉄信貴線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E6%9C%8D%E9%83%A8%E5%B7%9D%E9%A7%85/@34.6263383,135.6390551,17z/data=!3m1!4b1!4m5!3m4!1s0x600126def7708003:0xfe4087f715997094!8m2!3d34.6263383!4d135.6412438?hl=ja"
+              >服部川駅</a
+            >
+          </th>
+          <th>服部瞳子</th>
+          <th>八尾市</th>
           <th>-</th>
         </tr>
         <tr>
@@ -3215,6 +4309,30 @@
           <th>-</th>
         </tr>
         <tr>
+          <th>阪急神戸本線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E7%A5%9E%E5%B4%8E%E5%B7%9D%E9%A7%85/@34.7322946,135.4705662,17z/data=!3m1!4b1!4m5!3m4!1s0x6000e5bc9e7a3325:0x66da314a644d0d2c!8m2!3d34.7322946!4d135.4727549?hl=ja"
+              >神崎川駅</a
+            >
+          </th>
+          <th>神崎蘭子</th>
+          <th>大阪市淀川区</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>南海高野線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E5%8D%83%E6%97%A9%E5%8F%A3%E9%A7%85/@34.4117108,135.5877622,17z/data=!3m1!4b1!4m5!3m4!1s0x6000d54fbf01e0a7:0xac0a490caa9599d1!8m2!3d34.4117108!4d135.5899509?hl=ja"
+              >千早口駅</a
+            >
+          </th>
+          <th>如月千早</th>
+          <th>河内長野市</th>
+          <th>-</th>
+        </tr>
+        <tr>
           <th>南海高野線</th>
           <th>
             <a
@@ -3237,8 +4355,8 @@
           <th>難波笑美</th>
           <th>大阪市中央区</th>
           <th>
-            <div><a href="画/難波1.png">駅前やで～JRだけど</a></div>
-            <div><a href="画/難波2.png">駅前やで～大阪メトロだけど</a></div>
+            <div><a href="画/難波1.png">駅前や～JRだけど</a></div>
+            <div><a href="画/難波2.png">駅前や～メトロだけど</a></div>
             <div><a href="画/難波3.png">日本橋にきたで～1</a></div>
             <div><a href="画/難波4.png">日本橋にきたで～2</a></div>
             <div><a href="画/難波5.jpg">駅前やで～(2020)</a></div>
@@ -3246,7 +4364,43 @@
           </th>
         </tr>
         <tr>
-          <th>大阪モノレール</th>
+          <th>阪堺電車阪堺線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E6%9D%BE%E7%94%B0%E7%94%BA%E9%A7%85/@34.6392453,135.4986848,17z/data=!3m1!4b1!4m5!3m4!1s0x6000dd91e379c845:0x8c16e1443ac3140d!8m2!3d34.6392453!4d135.5008735?hl=ja"
+              >松田町停留場</a
+            >
+          </th>
+          <th>松田亜利沙</th>
+          <th>大阪市西成区</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>阪堺電車阪堺線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E5%A4%A7%E5%92%8C%E5%B7%9D%E9%A7%85/@34.5949494,135.484653,17z/data=!3m1!4b1!4m5!3m4!1s0x6000dcf63215d861:0xa3b0ca144bcce8cd!8m2!3d34.5949494!4d135.4868417?hl=ja"
+              >大和川停留場</a
+            >
+          </th>
+          <th>大和亜季</th>
+          <th>堺市堺区</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>泉北高速鉄道線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E5%92%8C%E6%B3%89%E4%B8%AD%E5%A4%AE%E9%A7%85/@34.460682,135.4533911,17z/data=!3m1!4b1!4m5!3m4!1s0x6000d02431897529:0xe627ad4c601e42b5!8m2!3d34.460682!4d135.4555798?hl=ja"
+              >和泉中央駅</a
+            >
+          </th>
+          <th>大石泉,和泉愛依</th>
+          <th>和泉市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>大阪モノレール彩都線</th>
           <th>
             <a
               href="https://www.google.co.jp/maps/place/%E8%B1%8A%E5%B7%9D%E9%A7%85/@34.8346415,135.5246085,17z/data=!3m1!4b1!4m5!3m4!1s0x6000fc81965852e3:0x4820ee17a6a75547!8m2!3d34.8346371!4d135.5267972?hl=ja"
@@ -3355,7 +4509,7 @@
             <div><a href="画/喜多2.png">駅前と日菜子ちゃん</a></div>
             <div><a href="画/喜多3.jpg">府道看板</a></div>
             <div><a href="画/喜多4.jpg">天橋立ですよ～</a></div>
-            <div><a href="画/喜多5.jpg">天橋立を見下ろして・・・</a></div>
+            <div><a href="画/喜多5.jpg">天橋立を見下ろして</a></div>
           </th>
         </tr>
         <tr>
@@ -3370,11 +4524,11 @@
           <th>舞鶴市</th>
           <th>
             <div><a href="画/神崎1.png">駅に降臨よ!!!byしらたかP</a></div>
-            <div><a href="画/神崎2.png">駅名標と蘭子ちゃん1byしらたかP</a></div>
+            <div><a href="画/神崎2.png">ごかん感じてbyしらたかP</a></div>
             <div><a href="画/神崎3.png">「神崎」の看板byしらたかP</a></div>
             <div><a href="画/神崎4.png">神崎海水浴場byしらたかP</a></div>
             <div>
-              <a href="画/神崎5.jpeg">駅名標と蘭子ちゃん2byしらたかP</a>
+              <a href="画/神崎5.jpeg">やみのまbyしらたかP</a>
             </div>
           </th>
         </tr>
@@ -3532,6 +4686,18 @@
           <th>三田市</th>
           <th>-</th>
         </tr>
+        <tr>
+          <th>北条鉄道北条線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E5%8C%97%E6%9D%A1%E7%94%BA%E9%A7%85/@34.9294358,134.8301116,17z/data=!3m1!4b1!4m5!3m4!1s0x35553ab80e5b7583:0xa2df357b2d3ccb00!8m2!3d34.9294358!4d134.8323003?hl=ja"
+              >北条町駅</a
+            >
+          </th>
+          <th>北条加蓮</th>
+          <th>加西市</th>
+          <th>-</th>
+        </tr>
       </table>
 
       <h3 align="center" id="Nara">奈良県</h3>
@@ -3554,10 +4720,10 @@
           <th>櫻井桃華</th>
           <th>桜井市</th>
           <th>
-            <div><a href="画/桜井1.png">桜井駅ですわ!!</a></div>
+            <div><a href="画/桜井1.png">桜井駅ですわ!</a></div>
             <div><a href="画/桜井2.png">駅名標と桃華ちゃん</a></div>
             <div><a href="画/桜井3.png">駅前と桃華ちゃん</a></div>
-            <div><a href="画/桜井5.jpg">闇に飲まれよ!!ですわ～</a></div>
+            <div><a href="画/桜井5.jpg">闇に飲まれよ!ですわ～</a></div>
           </th>
         </tr>
         <tr>
@@ -3650,6 +4816,18 @@
           </th>
         </tr>
         <tr>
+          <th>湖西線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E5%8C%97%E5%B0%8F%E6%9D%BE%E9%A7%85/@35.2538312,135.96853,17z/data=!3m1!4b1!4m5!3m4!1s0x600199781e52fc33:0x6ce1a356f3d07345!8m2!3d35.2538312!4d135.9707187?hl=ja"
+              >北小松駅</a
+            >
+          </th>
+          <th>小松伊吹</th>
+          <th>大津市</th>
+          <th>-</th>
+        </tr>
+        <tr>
           <th>北陸本線</th>
           <th>
             <a
@@ -3702,11 +4880,47 @@
             <div><a href="画/椿5.jpg">駅名標と椿ちゃん</a></div>
           </th>
         </tr>
+        <tr>
+          <th>紀勢本線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E6%B5%B7%E5%8D%97%E9%A7%85/@34.1543999,135.2121583,17z/data=!3m1!4b1!4m5!3m4!1s0x60074ea591c96457:0x3f1f1b1f48f7dc43!8m2!3d34.1543999!4d135.214347?hl=ja"
+              >海南駅</a
+            >
+          </th>
+          <th>杉坂海</th>
+          <th>海南市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>和歌山電鉄貴志川線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E7%94%B0%E4%B8%AD%E5%8F%A3%E9%A7%85/@34.2270649,135.1909206,17z/data=!3m1!4b1!4m5!3m4!1s0x6000b32e94934253:0x512246a7f8a71d70!8m2!3d34.2270649!4d135.1931093?hl=ja"
+              >田中口駅</a
+            >
+          </th>
+          <th>田中琴葉,田中摩美々</th>
+          <th>和歌山市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>南海高野線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E7%B4%80%E4%BC%8A%E7%A5%9E%E8%B0%B7%E9%A7%85/@34.242769,135.5688519,17z/data=!3m1!4b1!4m5!3m4!1s0x600727cfc26a806f:0x664dd907fbb6989d!8m2!3d34.242769!4d135.5710406?hl=ja"
+              >紀伊神谷駅</a
+            >
+          </th>
+          <th>神谷奈緒,神谷幸広</th>
+          <th>高野町</th>
+          <th>-</th>
+        </tr>
       </table>
     </section>
     <a href="index.html#top">メニュートップに戻る</a>
     <section>
-      <h2 id="Tusikoku">中国・四国</h2>
+      <h2>中国・四国</h2>
       <h3 align="center" id="Hiroshima">広島県</h3>
       <table border="1">
         <tr>
@@ -3722,13 +4936,17 @@
             <a
               href="https://www.google.co.jp/maps/place/%E7%A6%8F%E5%B1%B1%E9%A7%85/@34.4892045,133.35919,17z/data=!3m1!4b1!4m5!3m4!1s0x355110e4dacd8f1f:0x64c88f457ab4d258!8m2!3d34.4892001!4d133.3613787?hl=ja"
               >福山駅</a
+            ><br />
+            <a
+              href="https://www.google.co.jp/maps/place/%E6%9D%B1%E7%A6%8F%E5%B1%B1%E9%A7%85/@34.4952236,133.4032337,17z/data=!3m1!4b1!4m5!3m4!1s0x35511155155f5021:0x1e6e0b9436a02f9d!8m2!3d34.4952236!4d133.4054224?hl=ja"
+              >東福山駅</a
             >
           </th>
           <th>福山舞</th>
           <th>福山市</th>
           <th>
-            <div><a href="画/福山1.png">駅名標と舞ちゃん1byしらたかP</a></div>
-            <div><a href="画/福山2.png">駅名標と舞ちゃん2byしらたかP</a></div>
+            <div><a href="画/福山1.png">陽とbyしらたかP</a></div>
+            <div><a href="画/福山2.png">陰@福山byしらたかP</a></div>
           </th>
         </tr>
         <tr>
@@ -3742,9 +4960,9 @@
           <th>松永涼</th>
           <th>福山市</th>
           <th>
-            <div><a href="画/松永1.png">駅名標と涼さん1byしらたかP</a></div>
-            <div><a href="画/松永2.png">駅前と涼さんbyしらたかP</a></div>
-            <div><a href="画/松永3.png">駅名標と涼さん2byしらたかP</a></div>
+            <div><a href="画/松永1.png">上陸だ涼byしらたかP</a></div>
+            <div><a href="画/松永2.png">タクシーbyしらたかP</a></div>
+            <div><a href="画/松永3.png">カッコよくbyしらたかP</a></div>
           </th>
         </tr>
         <tr>
@@ -3760,6 +4978,33 @@
           <th>-</th>
         </tr>
         <tr>
+          <th>山陽本線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E5%AE%89%E8%8A%B8%E4%B8%AD%E9%87%8E%E9%A7%85/@34.3909638,132.5611132,17z/data=!3m1!4b1!4m5!3m4!1s0x355075762ca0719d:0x177ca2cceb29d35c!8m2!3d34.3909638!4d132.5633019?hl=ja"
+              >安芸中野駅</a
+            ><br /><a
+              href="https://www.google.co.jp/maps/place/%E4%B8%AD%E9%87%8E%E6%9D%B1%E9%A7%85/@34.4039123,132.5767266,17z/data=!3m1!4b1!4m5!3m4!1s0x355075c795be8ac9:0x281a89ba50d2700d!8m2!3d34.4039123!4d132.5789153?hl=ja"
+              >中野東駅</a
+            >
+          </th>
+          <th>中野有香</th>
+          <th>広島市安芸区</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>芸備線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E5%AE%89%E8%8A%B8%E7%9F%A2%E5%8F%A3%E9%A7%85/@34.4629503,132.4929616,17z/data=!3m1!4b1!4m5!3m4!1s0x355a9c23b0a2bd29:0xf82e174f0e46bd75!8m2!3d34.4629503!4d132.4951503?hl=ja"
+              >安芸矢口駅</a
+            >
+          </th>
+          <th>矢口美羽</th>
+          <th>広島市安佐北区</th>
+          <th>-</th>
+        </tr>
+        <tr>
           <th>芸備線</th>
           <th>
             <a
@@ -3769,6 +5014,18 @@
           </th>
           <th>三好紗南</th>
           <th>三次市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>芸備線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E5%82%99%E5%BE%8C%E8%A5%BF%E5%9F%8E%E9%A7%85/@34.9402619,133.1175151,17z/data=!3m1!4b1!4m5!3m4!1s0x3550d45c438bcf1b:0xc24a3532d6c70f34!8m2!3d34.9402619!4d133.1197038?hl=ja"
+              >備後西城駅</a
+            >
+          </th>
+          <th>西城樹里</th>
+          <th>庄原市</th>
           <th>-</th>
         </tr>
         <tr>
@@ -3807,6 +5064,42 @@
           <th>広島市安佐南区</th>
           <th>-</th>
         </tr>
+        <tr>
+          <th>スカイレール</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E3%81%BF%E3%81%A9%E3%82%8A%E5%8F%A3%E9%A7%85/@34.4222052,132.5941549,17z/data=!3m1!4b1!4m5!3m4!1s0x35507685f2697a51:0xb377ecf661fd8b5a!8m2!3d34.4222052!4d132.5963436?hl=ja"
+              >みどり口駅</a
+            >
+          </th>
+          <th>水野翠</th>
+          <th>広島市安芸区</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>スカイレール</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E3%81%BF%E3%81%A9%E3%82%8A%E4%B8%AD%E5%A4%AE%E9%A7%85/@34.4301821,132.5874152,17z/data=!3m1!4b1!4m5!3m4!1s0x35507661f7c67e55:0x2e75908a92df2ce3!8m2!3d34.4301821!4d132.5896039?hl=ja"
+              >みどり中央駅</a
+            >
+          </th>
+          <th>水野翠</th>
+          <th>広島市安芸区</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>広電宮島線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E7%9A%84%E5%A0%B4%E7%94%BA%E9%A7%85/@34.3932022,132.4724577,17z/data=!3m1!4b1!4m5!3m4!1s0x355a9f557bd9e04b:0x28b3bc5792056c40!8m2!3d34.3932022!4d132.4746464?hl=ja"
+              >的場町停留場</a
+            >
+          </th>
+          <th>的場梨沙</th>
+          <th>広島市南区</th>
+          <th>-</th>
+        </tr>
       </table>
 
       <h3 align="center" id="Okayama">岡山県</h3>
@@ -3841,9 +5134,9 @@
           <th>服部瞳子</th>
           <th>総社市</th>
           <th>
-            <div><a href="画/服部1.png">駅前と瞳子さんbyしらたかP</a></div>
-            <div><a href="画/服部2.png">駅名標と瞳子さん1byしらたかP</a></div>
-            <div><a href="画/服部3.png">駅名標と瞳子さん2byしらたかP</a></div>
+            <div><a href="画/服部1.png">セクシーbyしらたかP</a></div>
+            <div><a href="画/服部2.png">瞳子さんbyしらたかP</a></div>
+            <div><a href="画/服部3.png">ワクワクbyしらたかP</a></div>
           </th>
         </tr>
         <tr>
@@ -3859,6 +5152,18 @@
           <th>-</th>
         </tr>
         <tr>
+          <th>姫新線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E7%BE%8E%E4%BD%9C%E5%A4%A7%E5%B4%8E%E9%A7%85/@35.0453736,134.0653256,17z/data=!3m1!4b1!4m5!3m4!1s0x355436661df3f297:0x641433fce284d2a6!8m2!3d35.0453736!4d134.0675143?hl=ja"
+              >美作大崎駅</a
+            >
+          </th>
+          <th>大崎甘奈,大崎甜花</th>
+          <th>津山市</th>
+          <th>-</th>
+        </tr>
+        <tr>
           <th>因美線</th>
           <th>
             <a
@@ -3868,6 +5173,18 @@
           </th>
           <th>三浦あずさ</th>
           <th>津山市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>岡山電気軌道東山線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E6%9F%B3%E5%B7%9D%E9%A7%85/@34.6656308,133.9235455,17z/data=!3m1!4b1!4m5!3m4!1s0x3554063639a5b919:0x67434da50e4f7152!8m2!3d34.6656308!4d133.9257342?hl=ja"
+              >柳川停留場</a
+            >
+          </th>
+          <th>柳清良</th>
+          <th>岡山市北区</th>
           <th>-</th>
         </tr>
         <tr>
@@ -3942,6 +5259,30 @@
           <th>-</th>
         </tr>
         <tr>
+          <th>山陽本線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E4%B8%8B%E9%96%A2%E9%A7%85/@33.9505767,130.919912,17z/data=!3m1!4b1!4m5!3m4!1s0x3543bdca6df434b5:0x28d7dc7338a42cc1!8m2!3d33.9505767!4d130.9221007?hl=ja"
+              >下関駅</a
+            >
+          </th>
+          <th>関裕美</th>
+          <th>下関市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>岩徳線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E5%91%A8%E9%98%B2%E9%AB%98%E6%A3%AE%E9%A7%85/@34.090726,132.0443214,17z/data=!3m1!4b1!4m5!3m4!1s0x354524faf05a5e57:0xd724d4406d811af2!8m2!3d34.090726!4d132.0465101?hl=ja"
+              >周防高森駅</a
+            >
+          </th>
+          <th>高森藍子</th>
+          <th>岩国市</th>
+          <th>-</th>
+        </tr>
+        <tr>
           <th>山陰本線</th>
           <th>
             <a
@@ -3975,6 +5316,18 @@
           <th>対応アイドル</th>
           <th>所在地</th>
           <th>画像データ</th>
+        </tr>
+        <tr>
+          <th>山陰本線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E4%B8%8B%E5%8C%97%E6%9D%A1%E9%A7%85/@35.4822317,133.8060088,17z/data=!3m1!4b1!4m5!3m4!1s0x3555df6b2357c5c1:0x5f4385df71ec1f79!8m2!3d35.4822317!4d133.8081975?hl=ja"
+              >下北条駅</a
+            >
+          </th>
+          <th>北条加蓮</th>
+          <th>北栄町</th>
+          <th>-</th>
         </tr>
         <tr>
           <th>因美線</th>
@@ -4038,12 +5391,48 @@
           <th>予讃線</th>
           <th>
             <a
+              href="https://www.google.co.jp/maps/place/%E9%96%A2%E5%B7%9D%E9%A7%85/@33.9558088,133.3905525,17z/data=!3m1!4b1!4m5!3m4!1s0x3551c6d948b4ac2b:0x368c4740d735cf9e!8m2!3d33.9558088!4d133.3927412?hl=ja"
+              >関川駅</a
+            >
+          </th>
+          <th>関裕美</th>
+          <th>四国中央市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>予讃線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E4%BC%8A%E4%BA%88%E5%B0%8F%E6%9D%BE%E9%A7%85/@33.8975386,133.114498,17z/data=!3m1!4b1!4m5!3m4!1s0x35502b8ab27d7169:0xf2a6d7a5ce545100!8m2!3d33.8975386!4d133.1166867?hl=ja"
+              >伊予小松駅</a
+            >
+          </th>
+          <th>小松伊吹</th>
+          <th>西条市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>予讃線</th>
+          <th>
+            <a
               href="https://www.google.co.jp/maps/place/%E5%A4%A7%E8%A5%BF%E9%A7%85/@34.0661542,132.9272097,17z/data=!3m1!4b1!4m5!3m4!1s0x35503cbc7cde3ea7:0x1edd1ecf315f4040!8m2!3d34.0661542!4d132.9294037?hl=ja"
               >大西駅</a
             >
           </th>
           <th>大西由里子</th>
           <th>今治市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>予讃線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E4%BC%8A%E4%BA%88%E5%8C%97%E6%9D%A1%E9%A7%85/@33.9725755,132.7729035,17z/data=!3m1!4b1!4m5!3m4!1s0x35501df7e203713d:0x6bf8927b28065c54!8m2!3d33.9725755!4d132.7750922?hl=ja"
+              >伊予北条駅</a
+            >
+          </th>
+          <th>北条加蓮</th>
+          <th>松山市</th>
           <th>-</th>
         </tr>
         <tr>
@@ -4068,6 +5457,18 @@
           </th>
           <th>天海春香</th>
           <th>大洲市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>伊予鉄道高浜線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E6%9D%BE%E5%B1%B1%E5%B8%82%E9%A7%85/@33.8361086,132.7600017,17z/data=!3m1!4b1!4m5!3m4!1s0x354fe58bf3bff60b:0xc3034edf0eb4c377!8m2!3d33.8361086!4d132.7621904?hl=ja"
+              >松山市駅</a
+            >
+          </th>
+          <th>松山久美子</th>
+          <th>松山市</th>
           <th>-</th>
         </tr>
       </table>
@@ -4129,6 +5530,18 @@
           <th>まんのう町</th>
           <th>-</th>
         </tr>
+        <tr>
+          <th>高松琴平電気鉄道志度線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E6%98%A5%E6%97%A5%E5%B7%9D%E9%A7%85/@34.3409714,134.0813793,17z/data=!3m1!4b1!4m5!3m4!1s0x3553eca68d63782d:0x935200bd6d679c29!8m2!3d34.3409714!4d134.083568?hl=ja"
+              >春日川駅</a
+            >
+          </th>
+          <th>春日未来</th>
+          <th>高松市</th>
+          <th>-</th>
+        </tr>
       </table>
 
       <h3 align="center" id="Tokushima">徳島県</h3>
@@ -4139,6 +5552,30 @@
           <th>対応アイドル</th>
           <th>所在地</th>
           <th>画像データ</th>
+        </tr>
+        <tr>
+          <th>徳島線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E9%98%BF%E6%B3%A2%E5%B7%9D%E5%B3%B6%E9%A7%85/@34.06185,134.3185908,17z/data=!3m1!4b1!4m5!3m4!1s0x3553a42650b5c01b:0x15b21250ef0f138!8m2!3d34.06185!4d134.3207795?hl=ja"
+              >阿波川島駅</a
+            >
+          </th>
+          <th>川島瑞樹</th>
+          <th>吉野川市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>牟岐線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E9%98%BF%E6%B3%A2%E6%A9%98%E9%A7%85/@33.8885854,134.6495425,17z/data=!3m1!4b1!4m5!3m4!1s0x35531711af71a239:0xf6587d7e96a36bdd!8m2!3d33.8885854!4d134.6517312?hl=ja"
+              >阿波橘駅</a
+            >
+          </th>
+          <th>橘ありす,橘志狼</th>
+          <th>阿南市</th>
+          <th>-</th>
         </tr>
         <tr>
           <th>牟岐線</th>
@@ -4162,6 +5599,18 @@
           <th>対応アイドル</th>
           <th>所在地</th>
           <th>画像データ</th>
+        </tr>
+        <tr>
+          <th>土讃線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E5%9C%9F%E4%BD%90%E5%8C%97%E5%B7%9D%E9%A7%85/@33.7148911,133.6840121,17z/data=!3m1!4b1!4m5!3m4!1s0x3551fa7063b50a6d:0xd8c25bac23e7e0d9!8m2!3d33.7148911!4d133.6862008?hl=ja"
+              >土佐北川駅</a
+            >
+          </th>
+          <th>北川真尋</th>
+          <th>大豊町</th>
+          <th>-</th>
         </tr>
         <tr>
           <th>土讃線</th>
@@ -4231,7 +5680,7 @@
     </section>
     <a href="index.html#top">メニュートップに戻る</a>
     <section>
-      <h2 id="Kyusyu">九州</h2>
+      <h2>九州</h2>
       <h3 align="center" id="Hukuoka">福岡県</h3>
       <table border="1">
         <tr>
@@ -4252,10 +5701,10 @@
           <th>黒埼ちとせ</th>
           <th>北九州市八幡西区</th>
           <th>
-            <div><a href="画/黒埼1.jpeg">駅名標とちとせちゃん1byK153P</a></div>
-            <div><a href="画/黒埼2.jpeg">駅名標とちとせちゃん2byK153P</a></div>
-            <div><a href="画/黒埼3.jpeg">駅前とちとせちゃんbyK153P</a></div>
-            <div><a href="画/黒埼4.jpeg">ちとせちゃんの誘惑byK153P</a></div>
+            <div><a href="画/黒埼1.jpeg">魔法使いとbyK153P</a></div>
+            <div><a href="画/黒埼2.jpeg">ちとせちゃんbyK153P</a></div>
+            <div><a href="画/黒埼3.jpeg">降臨byK153P</a></div>
+            <div><a href="画/黒埼4.jpeg">誘惑byK153P</a></div>
           </th>
         </tr>
         <tr>
@@ -4269,10 +5718,10 @@
           <th>東郷あい</th>
           <th>宗像市</th>
           <th>
-            <div><a href="画/東郷1.jpeg">駅名標とあいさん1byK153P</a></div>
-            <div><a href="画/東郷2.jpeg">駅名標とあいさん2byK153P</a></div>
-            <div><a href="画/東郷3.jpeg">駅前とあいさんbyK153P</a></div>
-            <div><a href="画/東郷4.jpeg">次はどこへ行こうか?byK153P</a></div>
+            <div><a href="画/東郷1.jpeg">ムナカタ…byK153P</a></div>
+            <div><a href="画/東郷2.jpeg">ドヤァbyK153P</a></div>
+            <div><a href="画/東郷3.jpeg">ハイ!!byK153P</a></div>
+            <div><a href="画/東郷4.jpeg">次はどこへ?byK153P</a></div>
           </th>
         </tr>
         <tr>
@@ -4286,10 +5735,10 @@
           <th>古賀小春</th>
           <th>古賀市</th>
           <th>
-            <div><a href="画/古賀1.jpeg">駅名標と小春ちゃん1byK153P</a></div>
-            <div><a href="画/古賀2.jpeg">駅名標と小春ちゃん2byK153P</a></div>
-            <div><a href="画/古賀3.jpeg">駅前と小春ちゃんbyK153P</a></div>
-            <div><a href="画/古賀4.jpeg">小春ちゃんが現れた!byK153P</a></div>
+            <div><a href="画/古賀1.jpeg">古賀に出現byK153P</a></div>
+            <div><a href="画/古賀2.jpeg">小さな春2byK153P</a></div>
+            <div><a href="画/古賀3.jpeg">わーい!!byK153P</a></div>
+            <div><a href="画/古賀4.jpeg">またね!byK153P</a></div>
           </th>
         </tr>
         <tr>
@@ -4363,10 +5812,10 @@
           <th>荒木比奈</th>
           <th>久留米市</th>
           <th>
-            <div><a href="画/荒木1.jpeg">駅名標と比奈ちゃん1byK153P</a></div>
-            <div><a href="画/荒木5.jpeg">駅名標と比奈ちゃん2byK153P</a></div>
-            <div><a href="画/荒木2.jpeg">駅前と比奈ちゃんbyK153P</a></div>
-            <div><a href="画/荒木3.jpeg">駅名標と比奈ちゃん3byK153P</a></div>
+            <div><a href="画/荒木1.jpeg">久留米のbyK153P</a></div>
+            <div><a href="画/荒木5.jpeg">隣にあるbyK153P</a></div>
+            <div><a href="画/荒木2.jpeg">荒木っス!byK153P</a></div>
+            <div><a href="画/荒木3.jpeg">あれは…byK153P</a></div>
             <div><a href="画/荒木4.jpeg">電車っス!byK153P</a></div>
           </th>
         </tr>
@@ -4395,6 +5844,18 @@
           <th>-</th>
         </tr>
         <tr>
+          <th>久大本線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E7%AD%91%E5%BE%8C%E5%A4%A7%E7%9F%B3%E9%A7%85/@33.3472706,130.8146334,17z/data=!3m1!4b1!4m5!3m4!1s0x35416d98427422fb:0x38f6b077659c38d2!8m2!3d33.3472706!4d130.8168221?hl=ja"
+              >筑後大石駅</a
+            >
+          </th>
+          <th>大石泉</th>
+          <th>うきは市</th>
+          <th>-</th>
+        </tr>
+        <tr>
           <th>香椎線</th>
           <th>
             <a
@@ -4416,6 +5877,18 @@
           </th>
           <th>松山久美子</th>
           <th>糸田町</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>平成筑豊鉄道伊田線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E4%B8%AD%E6%B3%89%E9%A7%85/@33.7209208,130.7407965,17z/data=!3m1!4b1!4m5!3m4!1s0x3543d13c36791a81:0x5bbf6a5e20d6d774!8m2!3d33.7209208!4d130.7429852?hl=ja"
+              >中泉駅</a
+            >
+          </th>
+          <th>大石泉</th>
+          <th>直方市</th>
           <th>-</th>
         </tr>
         <tr>
@@ -4478,6 +5951,18 @@
           <th>-</th>
         </tr>
         <tr>
+          <th>長崎本線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E8%82%A5%E5%89%8D%E7%99%BD%E7%9F%B3%E9%A7%85/@33.1870538,130.1336435,17z/data=!3m1!4b1!4m5!3m4!1s0x35402e05e3ddadcb:0xaa0becd711289de1!8m2!3d33.1870538!4d130.1358322?hl=ja"
+              >肥前白石駅</a
+            >
+          </th>
+          <th>白石紬</th>
+          <th>白石町</th>
+          <th>-</th>
+        </tr>
+        <tr>
           <th>佐世保線</th>
           <th>
             <a
@@ -4513,6 +5998,18 @@
           <th>画像データ</th>
         </tr>
         <tr>
+          <th>長崎本線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E8%82%A5%E5%89%8D%E5%8F%A4%E8%B3%80%E9%A7%85/@32.7984281,129.9495035,17z/data=!3m1!4b1!4m5!3m4!1s0x356aaa3a931e38f9:0xb5f1bc8e2609bcbf!8m2!3d32.7984281!4d129.9516922?hl=ja"
+              >肥前古賀駅</a
+            >
+          </th>
+          <th>古賀小春</th>
+          <th>長崎市</th>
+          <th>-</th>
+        </tr>
+        <tr>
           <th>大村線</th>
           <th>
             <a
@@ -4522,6 +6019,18 @@
           </th>
           <th>松原早耶</th>
           <th>大村市</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>長崎電気軌道本線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E8%8B%A5%E8%91%89%E7%94%BA/@32.7878237,129.8594379,17z/data=!3m1!4b1!4m5!3m4!1s0x356aace09508f0f7:0x2b4d3c89f1317a3c!8m2!3d32.7878237!4d129.8616266?hl=ja"
+              >若葉町停留場</a
+            >
+          </th>
+          <th>日下部若葉</th>
+          <th>長崎市</th>
           <th>-</th>
         </tr>
         <tr>
@@ -4593,6 +6102,18 @@
           </th>
           <th>白石紬</th>
           <th>芦北町</th>
+          <th>-</th>
+        </tr>
+        <tr>
+          <th>熊本電気鉄道菊池線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E5%A0%80%E5%B7%9D%E9%A7%85/@32.849186,130.7231389,17z/data=!3m1!4b1!4m5!3m4!1s0x3540f1281244b20d:0x69597fe9fcdccc4!8m2!3d32.849186!4d130.7253276?hl=ja"
+              >堀川駅</a
+            >
+          </th>
+          <th>堀裕子</th>
+          <th>熊本市北区</th>
           <th>-</th>
         </tr>
         <tr>
@@ -4725,6 +6246,18 @@
           <th>-</th>
         </tr>
         <tr>
+          <th>鹿児島本線</th>
+          <th>
+            <a
+              href="https://www.google.co.jp/maps/place/%E4%B8%8A%E4%BC%8A%E9%9B%86%E9%99%A2%E9%A7%85/@31.5938338,130.4572851,17z/data=!3m1!4b1!4m5!3m4!1s0x353e6863792d700b:0xaa52f72596f2da88!8m2!3d31.5938338!4d130.4594738?hl=ja"
+              >上伊集院駅</a
+            >
+          </th>
+          <th>伊集院惠,伊集院北斗</th>
+          <th>鹿児島市</th>
+          <th>-</th>
+        </tr>
+        <tr>
           <th>日豊本線</th>
           <th>
             <a
@@ -4751,6 +6284,28 @@
       </table>
     </section>
     <a href="index.html#top">メニュートップに戻る</a>
+    <p><strong>データ出典</strong></p>
+    <p class="syutten">
+      駅:「駅データ.jp」<a href="https://ekidata.jp/">ekidata.jp</a>
+    </p>
+    <p class="syutten">
+      バス停:「国土数値情報（バス停留所データ）（国土交通省）」を加工<br />
+      <a
+        href="https://nlftp.mlit.go.jp/ksj/jpgis/datalist/KsjTmplt-P11.html"
+        >nlftp.mlit.go.jp/ksj/jpgis/datalist/KsjTmplt-P11.html</a
+      >
+    </p>
+    <p class="syutten">
+      市町村:「国土数値情報（市町村役場等及び公的集会施設データ）（国土交通省）」を加工<br /><a
+        href="https://nlftp.mlit.go.jp/ksj/jpgis/datalist/KsjTmplt-P05.html"
+        >nlftp.mlit.go.jp/ksj/jpgis/datalist/KsjTmplt-P05.html</a
+      ><br />
+      及び「全国地方公共団体コード（総務省）」を加工<br /><a
+        href="https://www.soumu.go.jp/denshijiti/code.html"
+        >www.soumu.go.jp/denshijiti/code.html</a
+      >
+    </p>
+
     <p><strong>リンク集</strong></p>
     <ul>
       <li>
@@ -4762,8 +6317,6 @@
         <a href="https://github.com/doppurapit">github.com/doppurapit</a>
       </li>
     </ul>
-    <footer>
-      doppurapit 2019
-    </footer>
+    <footer>doppurapit 2019</footer>
   </body>
 </html>

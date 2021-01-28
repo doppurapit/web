@@ -2,7 +2,7 @@ function PrintTime() {
   var target = document.getElementById("nowtime");
   var time = new Date();
   var year = time.getFullYear();
-  var month = time.getMonth() + 1;
+  var month = ("0" + (time.getMonth() + 1)).slice(-2);
   var date = ("0" + time.getDate()).slice(-2);
   var hour = ("0" + time.getHours()).slice(-2);
   var min = ("0" + time.getMinutes()).slice(-2);
